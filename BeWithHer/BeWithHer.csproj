@@ -114,6 +114,7 @@
     <Compile Include="RegisterSelector.Designer.cs">
       <DependentUpon>RegisterSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterUtils.cs" />
     <Compile Include="UserRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +129,9 @@
     <Compile Include="UserMainMenu.Designer.cs">
       <DependentUpon>UserMainMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DoctorRegister.resx">
+      <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>

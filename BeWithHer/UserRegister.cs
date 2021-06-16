@@ -21,11 +21,7 @@ namespace BeWithHer
         private void register_button_Click(object sender, EventArgs e)
         {
 
-            if(RegisterInfoErrorCheck(uid_txtbox.Text, password_txtbox.Text, nickname_txtbox.Text, 
-                age_txtbox.Text, phone_txtbox.Text, period_txtbox.Text))
-            {
-                return;
-            }
+            if (!ValidRegisterArgs()) return;
 
             string cmdString = String.Format("insert into UINFO values('{0}', '{1}', '{2}', '{3}', '{4}', {5});",
                     uid_txtbox.Text, password_txtbox.Text, nickname_txtbox.Text, age_txtbox.Text, phone_txtbox.Text, period_txtbox.Text);
@@ -33,7 +29,8 @@ namespace BeWithHer
             try
             {
                 BeWithHerConnector.ExecuteNonQuery(cmdString);
-                MessageBox.Show("Register complete!");
+                MessageBox.Show("注册成功");
+                Program.SwitchForm<LogIn>(this);
             }
             catch (Exception ex)
             {
@@ -42,46 +39,64 @@ namespace BeWithHer
         }
 
         // return true if there exist error (invalid register info)
-        private bool RegisterInfoErrorCheck(string uid, string password, string nickname, string age, string phone, string period)
+        private bool ValidRegisterArgs()
         {
 
             if (uid_txtbox.Text == "" || password_txtbox.Text == "")
             {
                 MessageBox.Show("必须输入用户名和密码");
-                return true;
+                return false;
             }
 
-            if (UidExist(uid_txtbox.Text))
+            if (RegisterUtils.UidExist(uid_txtbox.Text))
             {
-                MessageBox.Show("用户名已存在");
-                return true;
+                MessageBox.Show("账号已存在");
+                return false;
             }
 
-            int iPeriod = 0;
-            try
+            if (uid_txtbox.TextLength > 18)
             {
-                iPeriod = Convert.ToInt32(period);
-            }
-            catch
-            {
-                MessageBox.Show("输入无效周期");
-                return true;
+                MessageBox.Show("账号必须小于18位");
+                return false;
             }
 
-            if(iPeriod <= 0 || iPeriod > 31)
+            if(password_txtbox.TextLength > 15)
             {
-                MessageBox.Show("输入无效周期");
-                return true;
+                MessageBox.Show("密码必须小于15位");
+                return false;
             }
 
-            return false;
+            if(nickname_txtbox.TextLength > 20)
+            {
+                MessageBox.Show("昵称必须小于20位");
+                return false;
+            }
+
+            if (!RegisterUtils.ValidPhoneNum(phone_txtbox.Text))
+            {
+                MessageBox.Show("无效电话号码");
+                return false;
+            }
+
+            if(!RegisterUtils.ValidAge(age_txtbox.Text))
+            {
+                MessageBox.Show("无效年龄");
+                return false;
+            }
+
+            if(!RegisterUtils.ValidPeriod(period_txtbox.Text))
+            {
+                MessageBox.Show("无效周期");
+                return false;
+            }
+
+            return true;
         }
 
-        private bool UidExist(string uid)
+
+        private void goback_button_Click(object sender, EventArgs e)
         {
-            bool userExist = Convert.ToInt32(BeWithHerConnector.ExecuteQuery(String.Format("select count(U_ID) from UINFO where U_ID = '{0}';", uid))[0][0]) == 1;
-            bool doctorExist = Convert.ToInt32(BeWithHerConnector.ExecuteQuery(String.Format("select count(DOC_ID) from DOCTOR where DOC_ID = '{0}';", uid))[0][0]) == 1;
-            return userExist || doctorExist;
+            Program.SwitchForm<LogIn>(this);
         }
     }
 }

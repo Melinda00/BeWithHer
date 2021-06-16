@@ -44,6 +44,7 @@ namespace BeWithHer
             this.register_label = new System.Windows.Forms.Label();
             this.register_button = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.goback_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uid_label
@@ -153,7 +154,7 @@ namespace BeWithHer
             // 
             // register_button
             // 
-            this.register_button.Location = new System.Drawing.Point(290, 355);
+            this.register_button.Location = new System.Drawing.Point(169, 355);
             this.register_button.Name = "register_button";
             this.register_button.Size = new System.Drawing.Size(96, 34);
             this.register_button.TabIndex = 13;
@@ -170,11 +171,22 @@ namespace BeWithHer
             this.toolStrip1.TabIndex = 14;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // goback_button
+            // 
+            this.goback_button.Location = new System.Drawing.Point(424, 355);
+            this.goback_button.Name = "goback_button";
+            this.goback_button.Size = new System.Drawing.Size(96, 34);
+            this.goback_button.TabIndex = 16;
+            this.goback_button.Text = "后退";
+            this.goback_button.UseVisualStyleBackColor = true;
+            this.goback_button.Click += new System.EventHandler(this.goback_button_Click);
+            // 
             // UserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goback_button);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.register_button);
             this.Controls.Add(this.register_label);
@@ -214,6 +226,7 @@ namespace BeWithHer
         private System.Windows.Forms.Label register_label;
         private System.Windows.Forms.Button register_button;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.Button goback_button;
     }
 }
 

@@ -17,7 +17,7 @@ namespace BeWithHer
             builder.Database = "BeWithHer";
             builder.UserID = "bewithher";
             builder.Password = "bewithher";
-            builder.ConnectionTimeout = 5;
+            builder.ConnectionTimeout = 10;
             mBeWithHerConnection = new MySqlConnection(builder.ToString());
             mBeWithHerConnection.Open();
         }
