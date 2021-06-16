@@ -41,9 +41,9 @@ namespace BeWithHer
             // 
             this.login_button.Location = new System.Drawing.Point(225, 280);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(75, 23);
+            this.login_button.Size = new System.Drawing.Size(77, 41);
             this.login_button.TabIndex = 0;
-            this.login_button.Text = "登陆";
+            this.login_button.Text = "登录";
             this.login_button.UseVisualStyleBackColor = true;
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
@@ -51,7 +51,7 @@ namespace BeWithHer
             // 
             this.register_button.Location = new System.Drawing.Point(442, 280);
             this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(75, 23);
+            this.register_button.Size = new System.Drawing.Size(84, 41);
             this.register_button.TabIndex = 1;
             this.register_button.Text = "注册";
             this.register_button.UseVisualStyleBackColor = true;

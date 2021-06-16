@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeWithHerConnector.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

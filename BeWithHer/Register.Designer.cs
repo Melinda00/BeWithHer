@@ -154,7 +154,7 @@ namespace BeWithHer
             // 
             this.register_button.Location = new System.Drawing.Point(290, 355);
             this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(75, 23);
+            this.register_button.Size = new System.Drawing.Size(96, 34);
             this.register_button.TabIndex = 13;
             this.register_button.Text = "注册";
             this.register_button.UseVisualStyleBackColor = true;

@@ -24,7 +24,7 @@ namespace BeWithHer
 
         private void register_button_Click(object sender, EventArgs e)
         {
-
+            Program.SwitchForm<Register>(this);
         }
     }
 }
