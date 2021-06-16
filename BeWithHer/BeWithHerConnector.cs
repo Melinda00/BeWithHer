@@ -16,7 +16,7 @@ namespace BeWithHer
             builder.Port = 3306;
             builder.Database = "BeWithHer";
             builder.UserID = "bewithher";
-            builder.Password = "bewither";
+            builder.Password = "bewithher";
             mBeWithHerConnection = new MySqlConnection(builder.ToString());
             mBeWithHerConnection.Open();
         }
