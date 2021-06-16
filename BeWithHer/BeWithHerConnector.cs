@@ -12,11 +12,12 @@ namespace BeWithHer
         public static void Connect()
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "10.120.224.205";
+            builder.Server = "192.168.1.103";
             builder.Port = 3306;
             builder.Database = "BeWithHer";
             builder.UserID = "bewithher";
             builder.Password = "bewithher";
+            builder.ConnectionTimeout = 5;
             mBeWithHerConnection = new MySqlConnection(builder.ToString());
             mBeWithHerConnection.Open();
         }
@@ -42,7 +43,7 @@ namespace BeWithHer
             {
                 while (reader.Read())
                 {
-                    object[] row = { };
+                    object[] row = new object[reader.FieldCount]; 
                     reader.GetValues(row);
                     result.Add(row);
                 }

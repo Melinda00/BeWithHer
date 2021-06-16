@@ -90,20 +90,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeWithHerConnector.cs" />
+    <Compile Include="DoctorMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorMainMenu.Designer.cs">
+      <DependentUpon>DoctorMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorRegister.Designer.cs">
+      <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Register.cs">
+    <Compile Include="RegisterSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
+    <Compile Include="RegisterSelector.Designer.cs">
+      <DependentUpon>RegisterSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegister.Designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMainMenu.Designer.cs">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,8 +140,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
+    <EmbeddedResource Include="RegisterSelector.resx">
+      <DependentUpon>RegisterSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMainMenu.resx">
+      <DependentUpon>UserMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -1,7 +1,7 @@
 ﻿
 namespace BeWithHer
 {
-    partial class Register
+    partial class UserRegister
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -43,6 +43,7 @@ namespace BeWithHer
             this.period_txtbox = new System.Windows.Forms.TextBox();
             this.register_label = new System.Windows.Forms.Label();
             this.register_button = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.SuspendLayout();
             // 
             // uid_label
@@ -144,11 +145,11 @@ namespace BeWithHer
             // register_label
             // 
             this.register_label.AutoSize = true;
-            this.register_label.Location = new System.Drawing.Point(328, 24);
+            this.register_label.Location = new System.Drawing.Point(338, 45);
             this.register_label.Name = "register_label";
-            this.register_label.Size = new System.Drawing.Size(37, 15);
+            this.register_label.Size = new System.Drawing.Size(67, 15);
             this.register_label.TabIndex = 12;
-            this.register_label.Text = "注册";
+            this.register_label.Text = "用户注册";
             // 
             // register_button
             // 
@@ -160,11 +161,21 @@ namespace BeWithHer
             this.register_button.UseVisualStyleBackColor = true;
             this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
-            // Register
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 14;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // UserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.register_button);
             this.Controls.Add(this.register_label);
             this.Controls.Add(this.period_txtbox);
@@ -179,7 +190,7 @@ namespace BeWithHer
             this.Controls.Add(this.nickname_label);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.uid_label);
-            this.Name = "Register";
+            this.Name = "UserRegister";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,6 +213,7 @@ namespace BeWithHer
         private System.Windows.Forms.TextBox period_txtbox;
         private System.Windows.Forms.Label register_label;
         private System.Windows.Forms.Button register_button;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }
 
