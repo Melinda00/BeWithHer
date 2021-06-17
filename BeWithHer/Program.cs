@@ -8,12 +8,26 @@ namespace BeWithHer
 {
     static class Program
     {
-        public static void SwitchForm<T>(Form before)
+        public static void SwitchForm<T>(Form formToClose, params object[] args)
         {
-            Form newForm = Activator.CreateInstance<T>() as Form;
+            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
             mAppContext.MainForm = newForm;
-            before.Close();
+            formToClose.Close();
             newForm.Show();
+        }
+
+        public static void SwitchForm<T>(Form[] formToClose, params object[] args)
+        {
+            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
+            mAppContext.MainForm = newForm;
+            foreach(Form f in formToClose) f.Close();
+            newForm.Show();
+        }
+
+        public static void CreateFormDialog<T>(params object[] args)
+        {
+            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
+            newForm.ShowDialog();
         }
 
         /// <summary>

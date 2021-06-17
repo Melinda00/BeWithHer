@@ -39,7 +39,8 @@ namespace BeWithHer
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<RegisterSelector>(this);
+            //Program.SwitchForm<RegisterSelector>(this);
+            Program.CreateFormDialog<RegisterSelector>(this);
         }
     }
 }

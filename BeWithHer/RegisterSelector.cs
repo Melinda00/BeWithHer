@@ -12,24 +12,27 @@ namespace BeWithHer
 {
     public partial class RegisterSelector : Form
     {
-        public RegisterSelector()
+        public RegisterSelector(Form logInForm)
         {
             InitializeComponent();
+            mLogInForm = logInForm;
         }
 
         private void user_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<UserRegister>(this);
+            Program.SwitchForm<UserRegister>(new Form[] { this, mLogInForm });
         }
 
         private void doctor_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<DoctorRegister>(this);
+            Program.SwitchForm<DoctorRegister>(new Form[] { this, mLogInForm });
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<LogIn>(this);
+            this.Close();
         }
+
+        private Form mLogInForm = null;
     }
 }
