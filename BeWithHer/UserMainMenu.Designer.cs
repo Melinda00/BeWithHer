@@ -56,9 +56,10 @@ namespace BeWithHer
             // menu_label
             // 
             this.menu_label.AutoSize = true;
-            this.menu_label.Location = new System.Drawing.Point(330, 118);
+            this.menu_label.Location = new System.Drawing.Point(248, 94);
+            this.menu_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.menu_label.Name = "menu_label";
-            this.menu_label.Size = new System.Drawing.Size(82, 15);
+            this.menu_label.Size = new System.Drawing.Size(65, 12);
             this.menu_label.TabIndex = 0;
             this.menu_label.Text = "用户主界面";
             // 
@@ -67,10 +68,12 @@ namespace BeWithHer
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(801, 159);
+            this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(601, 125);
             this.toolStripContainer1.Location = new System.Drawing.Point(1, 0);
+            this.toolStripContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(801, 187);
+            this.toolStripContainer1.Size = new System.Drawing.Size(601, 150);
             this.toolStripContainer1.TabIndex = 1;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -90,7 +93,7 @@ namespace BeWithHer
             this.about_us});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(801, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(601, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,19 +103,19 @@ namespace BeWithHer
             this.change_myinfo,
             this.logout});
             this.myaccount.Name = "myaccount";
-            this.myaccount.Size = new System.Drawing.Size(83, 24);
+            this.myaccount.Size = new System.Drawing.Size(68, 21);
             this.myaccount.Text = "我的账号";
             // 
             // change_myinfo
             // 
             this.change_myinfo.Name = "change_myinfo";
-            this.change_myinfo.Size = new System.Drawing.Size(182, 26);
+            this.change_myinfo.Size = new System.Drawing.Size(148, 22);
             this.change_myinfo.Text = "修改个人信息";
             // 
             // logout
             // 
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(182, 26);
+            this.logout.Size = new System.Drawing.Size(148, 22);
             this.logout.Text = "退出登录";
             // 
             // mycon
@@ -122,25 +125,25 @@ namespace BeWithHer
             this.history_con,
             this.reserve_con});
             this.mycon.Name = "mycon";
-            this.mycon.Size = new System.Drawing.Size(83, 24);
+            this.mycon.Size = new System.Drawing.Size(68, 21);
             this.mycon.Text = "我的咨询";
             // 
             // new_con
             // 
             this.new_con.Name = "new_con";
-            this.new_con.Size = new System.Drawing.Size(152, 26);
+            this.new_con.Size = new System.Drawing.Size(180, 22);
             this.new_con.Text = "新建咨询";
             // 
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(152, 26);
+            this.history_con.Size = new System.Drawing.Size(180, 22);
             this.history_con.Text = "历史咨询";
             // 
             // reserve_con
             // 
             this.reserve_con.Name = "reserve_con";
-            this.reserve_con.Size = new System.Drawing.Size(152, 26);
+            this.reserve_con.Size = new System.Drawing.Size(180, 22);
             this.reserve_con.Text = "预约咨询";
             // 
             // mydoctor
@@ -149,21 +152,20 @@ namespace BeWithHer
             this.reserve_doctor,
             this.contact_doctor});
             this.mydoctor.Name = "mydoctor";
-            this.mydoctor.Size = new System.Drawing.Size(83, 24);
+            this.mydoctor.Size = new System.Drawing.Size(68, 21);
             this.mydoctor.Text = "我的医生";
             // 
             // reserve_doctor
             // 
             this.reserve_doctor.Name = "reserve_doctor";
-            this.reserve_doctor.Size = new System.Drawing.Size(224, 26);
+            this.reserve_doctor.Size = new System.Drawing.Size(148, 22);
             this.reserve_doctor.Text = "预约医生";
             // 
             // contact_doctor
             // 
             this.contact_doctor.Name = "contact_doctor";
-            this.contact_doctor.Size = new System.Drawing.Size(224, 26);
+            this.contact_doctor.Size = new System.Drawing.Size(148, 22);
             this.contact_doctor.Text = "联系我的医生";
-          
             // 
             // myreport
             // 
@@ -171,25 +173,25 @@ namespace BeWithHer
             this.con_report,
             this.info_report});
             this.myreport.Name = "myreport";
-            this.myreport.Size = new System.Drawing.Size(113, 24);
+            this.myreport.Size = new System.Drawing.Size(92, 21);
             this.myreport.Text = "我的统计报告";
             // 
             // con_report
             // 
             this.con_report.Name = "con_report";
-            this.con_report.Size = new System.Drawing.Size(224, 26);
+            this.con_report.Size = new System.Drawing.Size(148, 22);
             this.con_report.Text = "咨询统计";
             // 
             // info_report
             // 
             this.info_report.Name = "info_report";
-            this.info_report.Size = new System.Drawing.Size(224, 26);
+            this.info_report.Size = new System.Drawing.Size(148, 22);
             this.info_report.Text = "经期信息统计";
             // 
             // about_us
             // 
             this.about_us.Name = "about_us";
-            this.about_us.Size = new System.Drawing.Size(132, 24);
+            this.about_us.Size = new System.Drawing.Size(106, 21);
             this.about_us.Text = "关于BeWithHer";
             // 
             // contextMenuStrip1
@@ -200,12 +202,13 @@ namespace BeWithHer
             // 
             // UserMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 360);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.menu_label);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserMainMenu";
             this.Text = "UserMainMenu";
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
