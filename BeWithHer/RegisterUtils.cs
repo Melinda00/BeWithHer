@@ -17,7 +17,7 @@ namespace BeWithHer
 
         static public bool ValidPhoneNum(string phone)
         {
-            if (phone.Length > 11) return false;
+            if (phone.Length != 11) return false;
             foreach (char c in phone)
             {
                 if (c < '0' || c > '9')

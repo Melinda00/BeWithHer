@@ -90,6 +90,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BeWithHerConnector.cs" />
+    <Compile Include="ChooseDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDoctor.Designer.cs">
+      <DependentUpon>ChooseDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consult.Designer.cs">
+      <DependentUpon>Consult.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,18 @@
     </Compile>
     <Compile Include="DoctorRegister.Designer.cs">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorSelector.Designer.cs">
+      <DependentUpon>DoctorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorSelectorBlind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorSelectorBlind.Designer.cs">
+      <DependentUpon>DoctorSelectorBlind.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
@@ -129,8 +153,20 @@
     <Compile Include="UserMainMenu.Designer.cs">
       <DependentUpon>UserMainMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChooseDoctor.resx">
+      <DependentUpon>ChooseDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consult.resx">
+      <DependentUpon>Consult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorRegister.resx">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorSelector.resx">
+      <DependentUpon>DoctorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorSelectorBlind.resx">
+      <DependentUpon>DoctorSelectorBlind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BeWithHer
 {
-    public partial class UserMainMenu : Form
+    public partial class DoctorSelector : Form
     {
-        public UserMainMenu()
+        public DoctorSelector()
         {
             InitializeComponent();
         }
-
-       
     }
 }

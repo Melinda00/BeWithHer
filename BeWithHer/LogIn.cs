@@ -19,6 +19,12 @@ namespace BeWithHer
 
         private void login_button_Click(object sender, EventArgs e)
         {
+            if(uid_txtbox.Text == "" || password_txtbox.Text == "")
+            {
+                MessageBox.Show("账号和密码不能为空");
+                return;
+            }
+
             string userCmd = String.Format("select count(U_ID) from UINFO where U_ID = '{0}' and U_PASWD = '{1}';", uid_txtbox.Text, password_txtbox.Text);
             string doctorCmd = String.Format("select count(DOC_ID) from DOCTOR where DOC_ID = '{0}' and DOC_PASWD = '{1}';", uid_txtbox.Text, password_txtbox.Text);
             List<object[]> userResult = BeWithHerConnector.ExecuteQuery(userCmd);
