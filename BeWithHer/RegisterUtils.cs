@@ -13,6 +13,7 @@ namespace BeWithHer
             bool userExist = Convert.ToInt32(BeWithHerConnector.ExecuteQuery(String.Format("select count(U_ID) from UINFO where U_ID = '{0}';", uid))[0][0]) == 1;
             bool doctorExist = Convert.ToInt32(BeWithHerConnector.ExecuteQuery(String.Format("select count(DOC_ID) from DOCTOR where DOC_ID = '{0}';", uid))[0][0]) == 1;
             return userExist || doctorExist;
+           
         }
 
         static public bool ValidPhoneNum(string phone)

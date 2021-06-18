@@ -24,6 +24,7 @@ namespace BeWithHer
         }
 
         public static Credential CurrentCredential { get; set; }
+        public static Random AppRandom = new Random();
 
 
 

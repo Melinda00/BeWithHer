@@ -65,10 +65,13 @@ namespace BeWithHer
             this.state2 = new System.Windows.Forms.RadioButton();
             this.state3 = new System.Windows.Forms.RadioButton();
             this.state4 = new System.Windows.Forms.RadioButton();
+            this.barcode_img = new System.Windows.Forms.PictureBox();
+            this.barcode_label = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode_img)).BeginInit();
             this.SuspendLayout();
             // 
             // con_time_label
@@ -491,11 +494,31 @@ namespace BeWithHer
             this.state4.Text = "4";
             this.state4.UseVisualStyleBackColor = true;
             // 
+            // barcode_img
+            // 
+            this.barcode_img.Location = new System.Drawing.Point(490, 11);
+            this.barcode_img.Name = "barcode_img";
+            this.barcode_img.Size = new System.Drawing.Size(270, 50);
+            this.barcode_img.TabIndex = 49;
+            this.barcode_img.TabStop = false;
+            // 
+            // barcode_label
+            // 
+            this.barcode_label.AutoSize = true;
+            this.barcode_label.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.barcode_label.Location = new System.Drawing.Point(576, 64);
+            this.barcode_label.Name = "barcode_label";
+            this.barcode_label.Size = new System.Drawing.Size(97, 19);
+            this.barcode_label.TabIndex = 27;
+            this.barcode_label.Text = "xxxxxxxx";
+            // 
             // NewConsult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.barcode_label);
+            this.Controls.Add(this.barcode_img);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.submit_button);
@@ -523,6 +546,7 @@ namespace BeWithHer
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,5 +590,7 @@ namespace BeWithHer
         private System.Windows.Forms.RadioButton state2;
         private System.Windows.Forms.RadioButton state3;
         private System.Windows.Forms.RadioButton state4;
+        private System.Windows.Forms.PictureBox barcode_img;
+        private System.Windows.Forms.Label barcode_label;
     }
 }

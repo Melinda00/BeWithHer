@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BarcodeLib;
+using System.Drawing.Imaging;
+
 namespace BeWithHer
 {
     public partial class NewConsult : Form
@@ -18,12 +21,20 @@ namespace BeWithHer
             consult_date.Text = DateTime.Today.ToString("yyyy/MM/dd");
             mSelectedDoctor = doctorCredential;
             selected_doctor_label.Text = mSelectedDoctor.Name;
+            mBarCode = GenerateBarCode();
+
+
+            Barcode barcodLib = new Barcode();
+            Color foreColor = Color.Black; // Color to print barcode
+            Color backColor = Color.Transparent; //background color
+            barcode_label.Text = mBarCode;
+            barcode_img.Image = barcodLib.Encode(TYPE.CODE128, mBarCode, foreColor, backColor, barcode_img.Size.Width, barcode_img.Size.Height);
         }
 
         private void submit_button_Click(object sender, EventArgs e)
         {
-            string cmd = String.Format("insert into CONINFO values('{0}', '{1}', '{2}', '{3}', {4}, {5}, {6}, {7}, '{8}');", 
-                GenerateBarCode(), Program.CurrentCredential.ID, mSelectedDoctor.ID, consult_date.Text, GetColor(), GetFlow(), GetState(), GetGrade(), rmk_txtbox.Text);
+            string cmd = String.Format("insert into CONINFO values('{0}', '{1}', '{2}', '{3}', {4}, {5}, {6}, {7}, '{8}');",
+                mBarCode, Program.CurrentCredential.ID, mSelectedDoctor.ID, consult_date.Text, GetColor(), GetFlow(), GetState(), GetGrade(), rmk_txtbox.Text);
             BeWithHerConnector.ExecuteNonQuery(cmd);
             MessageBox.Show("提交咨询完成");
             this.Hide();
@@ -37,7 +48,7 @@ namespace BeWithHer
             string result = "";
             for(int i = 0; i < 8; i++)
             {
-                result += chars[new Random().Next(0, chars.Length)];
+                result += chars[Program.AppRandom.Next(0, chars.Length)];
             }
             if (!BarCodeExist(result)) return result;
             else return GenerateBarCode();
@@ -89,5 +100,7 @@ namespace BeWithHer
         }
 
         private Credential mSelectedDoctor = null;
+        private string mBarCode;
+
     }
 }
