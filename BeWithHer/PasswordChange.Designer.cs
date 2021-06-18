@@ -32,15 +32,15 @@ namespace BeWithHer
             this.new_password_lable = new System.Windows.Forms.Label();
             this.new_password_txtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.new_password_txtbox1 = new System.Windows.Forms.TextBox();
+            this.confirm_password_txtbox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.origin_password_txtbox = new System.Windows.Forms.TextBox();
+            this.old_password_txtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.account_txtbox = new System.Windows.Forms.TextBox();
             this.change_password = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cancel_button = new System.Windows.Forms.Button();
+            this.account = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +48,10 @@ namespace BeWithHer
             // new_password_lable
             // 
             this.new_password_lable.AutoSize = true;
-            this.new_password_lable.Font = new System.Drawing.Font("方正清刻本悦宋简体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.new_password_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.new_password_lable.Location = new System.Drawing.Point(46, 71);
             this.new_password_lable.Name = "new_password_lable";
-            this.new_password_lable.Size = new System.Drawing.Size(70, 22);
+            this.new_password_lable.Size = new System.Drawing.Size(72, 25);
             this.new_password_lable.TabIndex = 1;
             this.new_password_lable.Text = "新密码";
             // 
@@ -65,23 +65,23 @@ namespace BeWithHer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("方正清刻本悦宋简体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(6, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 22);
+            this.label1.Size = new System.Drawing.Size(112, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "确认新密码";
             // 
-            // new_password_txtbox1
+            // confirm_password_txtbox
             // 
-            this.new_password_txtbox1.Location = new System.Drawing.Point(138, 120);
-            this.new_password_txtbox1.Name = "new_password_txtbox1";
-            this.new_password_txtbox1.Size = new System.Drawing.Size(171, 25);
-            this.new_password_txtbox1.TabIndex = 7;
+            this.confirm_password_txtbox.Location = new System.Drawing.Point(138, 120);
+            this.confirm_password_txtbox.Name = "confirm_password_txtbox";
+            this.confirm_password_txtbox.Size = new System.Drawing.Size(171, 25);
+            this.confirm_password_txtbox.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.new_password_txtbox1);
+            this.groupBox1.Controls.Add(this.confirm_password_txtbox);
             this.groupBox1.Controls.Add(this.new_password_lable);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.new_password_txtbox);
@@ -94,10 +94,10 @@ namespace BeWithHer
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.origin_password_txtbox);
+            this.groupBox2.Controls.Add(this.account);
+            this.groupBox2.Controls.Add(this.old_password_txtbox);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.account_txtbox);
             this.groupBox2.Location = new System.Drawing.Point(12, 48);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(299, 191);
@@ -105,39 +105,32 @@ namespace BeWithHer
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "账号信息";
             // 
-            // origin_password_txtbox
+            // old_password_txtbox
             // 
-            this.origin_password_txtbox.Location = new System.Drawing.Point(87, 120);
-            this.origin_password_txtbox.Name = "origin_password_txtbox";
-            this.origin_password_txtbox.Size = new System.Drawing.Size(171, 25);
-            this.origin_password_txtbox.TabIndex = 7;
+            this.old_password_txtbox.Location = new System.Drawing.Point(87, 120);
+            this.old_password_txtbox.Name = "old_password_txtbox";
+            this.old_password_txtbox.Size = new System.Drawing.Size(171, 25);
+            this.old_password_txtbox.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("方正清刻本悦宋简体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(31, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 22);
+            this.label2.Size = new System.Drawing.Size(52, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "账号";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("方正清刻本悦宋简体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(11, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
+            this.label3.Size = new System.Drawing.Size(72, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "原密码";
-            // 
-            // account_txtbox
-            // 
-            this.account_txtbox.Location = new System.Drawing.Point(87, 68);
-            this.account_txtbox.Name = "account_txtbox";
-            this.account_txtbox.Size = new System.Drawing.Size(171, 25);
-            this.account_txtbox.TabIndex = 4;
             // 
             // change_password
             // 
@@ -147,27 +140,40 @@ namespace BeWithHer
             this.change_password.TabIndex = 10;
             this.change_password.Text = "确认修改";
             this.change_password.UseVisualStyleBackColor = true;
+            this.change_password.Click += new System.EventHandler(this.change_password_Click);
             // 
-            // button2
+            // cancel_button
             // 
-            this.button2.Location = new System.Drawing.Point(762, 160);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 33);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancel_button.Location = new System.Drawing.Point(762, 160);
+            this.cancel_button.Name = "cancel_button";
+            this.cancel_button.Size = new System.Drawing.Size(130, 33);
+            this.cancel_button.TabIndex = 11;
+            this.cancel_button.Text = "取消";
+            this.cancel_button.UseVisualStyleBackColor = true;
+            this.cancel_button.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // account
+            // 
+            this.account.AutoSize = true;
+            this.account.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.account.Location = new System.Drawing.Point(89, 74);
+            this.account.Name = "account";
+            this.account.Size = new System.Drawing.Size(119, 19);
+            this.account.TabIndex = 8;
+            this.account.Text = "placeholder";
             // 
             // PasswordChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 315);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.change_password);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PasswordChange";
             this.Text = "PasswordChange";
+            this.Load += new System.EventHandler(this.PasswordChange_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -180,14 +186,14 @@ namespace BeWithHer
         private System.Windows.Forms.Label new_password_lable;
         private System.Windows.Forms.TextBox new_password_txtbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox new_password_txtbox1;
+        private System.Windows.Forms.TextBox confirm_password_txtbox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox origin_password_txtbox;
+        private System.Windows.Forms.TextBox old_password_txtbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox account_txtbox;
         private System.Windows.Forms.Button change_password;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button cancel_button;
+        private System.Windows.Forms.Label account;
     }
 }

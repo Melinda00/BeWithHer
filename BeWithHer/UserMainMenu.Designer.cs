@@ -108,8 +108,9 @@ namespace BeWithHer
             // change_myinfo
             // 
             this.change_myinfo.Name = "change_myinfo";
-            this.change_myinfo.Size = new System.Drawing.Size(182, 26);
+            this.change_myinfo.Size = new System.Drawing.Size(224, 26);
             this.change_myinfo.Text = "修改个人信息";
+            this.change_myinfo.Click += new System.EventHandler(this.change_myinfo_Click);
             // 
             // logout
             // 
@@ -131,20 +132,20 @@ namespace BeWithHer
             // new_consult
             // 
             this.new_consult.Name = "new_consult";
-            this.new_consult.Size = new System.Drawing.Size(224, 26);
+            this.new_consult.Size = new System.Drawing.Size(152, 26);
             this.new_consult.Text = "新建咨询";
             this.new_consult.Click += new System.EventHandler(this.new_consult_Click);
             // 
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(224, 26);
+            this.history_con.Size = new System.Drawing.Size(152, 26);
             this.history_con.Text = "历史咨询";
             // 
             // reserve_con
             // 
             this.reserve_con.Name = "reserve_con";
-            this.reserve_con.Size = new System.Drawing.Size(224, 26);
+            this.reserve_con.Size = new System.Drawing.Size(152, 26);
             this.reserve_con.Text = "预约咨询";
             // 
             // mydoctor

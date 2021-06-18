@@ -72,5 +72,11 @@ namespace BeWithHer
             }
 
         }
+
+        private void change_myinfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PasswordChange().Show();
+        }
     }
 }
