@@ -47,23 +47,15 @@ select * from DOCTOR;
 delete from UINFO
 where U_ID = '123';
 
-select * from CONINFO;
-insert into DOCTOR values('789789', '789', 'charlie', '男', 'aaa', '15605369455', 'asd', 'Y');
-insert into CONINFO values('12345678', '123123', '789789', '2000-08-15', 1, 2, 3, 1, '大出血');
 
-select * from CONINFO;
-select * from UINFO;
-select * from UINFO
-limit 1 offset 2;
+-- 创建科室表
+CREATE TABLE DEPARTMENT(
+D_ID VARCHAR(6) NOT NULL,
+D_NAME VARCHAR(20) NOT NULL,
+D_HOSPITAL VARCHAR(15),
+D_ADDR VARCHAR(20) ,
+D_PHONE VARCHAR(11),
+PRIMARY KEY (D_ID)
+);
 
-select count(U_ID)
-from UINFO;
 
-select * from DOCTOR;
-
-select * from DOCTOR
-where cast(DOC_ID as int) > '98';
-
-SELECT CAST(DOC_ID AS INT) FROM DOCTOR;
-
-SELECT * FROM DOCTOR where CONVERT(DOC_ID, UNSIGNED INTEGER)  > 999 limit 10;

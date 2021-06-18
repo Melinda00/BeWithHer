@@ -130,6 +130,24 @@
     <Compile Include="NewConsult.Designer.cs">
       <DependentUpon>NewConsult.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultHistory.Designer.cs">
+      <DependentUpon>ConsultHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultingReserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultingReserve.Designer.cs">
+      <DependentUpon>ConsultingReserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorConsultReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorConsultReply.Designer.cs">
+      <DependentUpon>DoctorConsultReply.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +159,12 @@
     </Compile>
     <Compile Include="DoctorRegister.Designer.cs">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorReserveList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorReserveList.Designer.cs">
+      <DependentUpon>DoctorReserveList.cs</DependentUpon>
     </Compile>
     <Compile Include="DoctorSelector.cs">
       <SubType>Form</SubType>
@@ -159,6 +183,12 @@
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.Designer.cs">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterSelector.cs">
       <SubType>Form</SubType>
@@ -190,8 +220,23 @@
     <EmbeddedResource Include="NewConsult.resx">
       <DependentUpon>NewConsult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultHistory.resx">
+      <DependentUpon>ConsultHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultingReserve.resx">
+      <DependentUpon>ConsultingReserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorConsultReply.resx">
+      <DependentUpon>DoctorConsultReply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorMainMenu.resx">
+      <DependentUpon>DoctorMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorRegister.resx">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorReserveList.resx">
+      <DependentUpon>DoctorReserveList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorSelector.resx">
       <DependentUpon>DoctorSelector.cs</DependentUpon>
@@ -201,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChange.resx">
+      <DependentUpon>PasswordChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
