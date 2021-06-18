@@ -139,14 +139,16 @@ namespace BeWithHer
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(152, 26);
+            this.history_con.Size = new System.Drawing.Size(224, 26);
             this.history_con.Text = "历史咨询";
+            this.history_con.Click += new System.EventHandler(this.history_con_Click);
             // 
             // reserve_con
             // 
             this.reserve_con.Name = "reserve_con";
-            this.reserve_con.Size = new System.Drawing.Size(152, 26);
+            this.reserve_con.Size = new System.Drawing.Size(224, 26);
             this.reserve_con.Text = "预约咨询";
+            this.reserve_con.Click += new System.EventHandler(this.reserve_con_Click);
             // 
             // mydoctor
             // 

@@ -78,5 +78,17 @@ namespace BeWithHer
             this.Hide();
             new PasswordChange().Show();
         }
+
+        private void reserve_con_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ConsultingReserve().Show();
+        }
+
+        private void history_con_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ConsultHistory().Show();
+        }
     }
 }

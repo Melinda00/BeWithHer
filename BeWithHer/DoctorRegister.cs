@@ -26,11 +26,10 @@ namespace BeWithHer
             if (female_button.Checked) sex = "女";
             string adm = "F";
             if (adm_checkbox.Checked) adm = "T";
-            string dept = department_combobox.Items[department_combobox.SelectedIndex].ToString();
 
             string cmd = String.Format("insert into DOCTOR values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}');",
                 uid_txtbox.Text, password_txtbox.Text, name_txtbox.Text, sex, age_txtbox.Text,
-                dept, phone_txtbox.Text, remark_txtbox.Text, adm);
+                dept_number.Text, phone_txtbox.Text, remark_txtbox.Text, adm);
 
             try
             {
@@ -95,7 +94,7 @@ namespace BeWithHer
                 return false;
             }
 
-            if (department_combobox.Items[department_combobox.SelectedIndex].ToString() == "")
+            if (dept_number.Text == "")
             {
                 MessageBox.Show("科室不能为空");
                 return false;

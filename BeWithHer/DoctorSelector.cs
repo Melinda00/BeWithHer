@@ -24,7 +24,7 @@ namespace BeWithHer
             string cmd = "select * from DOCTOR;";
             List<object[]> result = BeWithHerConnector.ExecuteQuery(cmd);
             mDoctorCredentials = Credential.LoadDoctors(result);
-            for (int i = 0; i < result.Count; i++)
+            for (int i = 0; i < mDoctorCredentials.Count; i++)
             {
                 Credential doctorCredential = mDoctorCredentials[i];
 

@@ -47,10 +47,10 @@ namespace BeWithHer
             this.goback_button = new System.Windows.Forms.Button();
             this.male_button = new System.Windows.Forms.RadioButton();
             this.female_button = new System.Windows.Forms.RadioButton();
-            this.department_combobox = new System.Windows.Forms.ComboBox();
             this.adm_checkbox = new System.Windows.Forms.CheckBox();
             this.age_txtbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dept_number = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // doctor_register_label
@@ -211,39 +211,6 @@ namespace BeWithHer
             this.female_button.Text = "女";
             this.female_button.UseVisualStyleBackColor = true;
             // 
-            // department_combobox
-            // 
-            this.department_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.department_combobox.FormattingEnabled = true;
-            this.department_combobox.Items.AddRange(new object[] {
-            "中医科",
-            "产科",
-            "儿科",
-            "内分泌科",
-            "口腔科",
-            "呼吸内科",
-            "妇科",
-            "小儿科",
-            "心内科",
-            "感染科",
-            "普外科",
-            "泌尿内科",
-            "泌尿外科",
-            "消化内科",
-            "烧伤科",
-            "皮肤科",
-            "眼科",
-            "神经内科",
-            "神经外科",
-            "耳鼻喉科",
-            "肝胆外科",
-            "血液科",
-            "骨科"});
-            this.department_combobox.Location = new System.Drawing.Point(539, 106);
-            this.department_combobox.Name = "department_combobox";
-            this.department_combobox.Size = new System.Drawing.Size(105, 23);
-            this.department_combobox.TabIndex = 23;
-            // 
             // adm_checkbox
             // 
             this.adm_checkbox.AutoSize = true;
@@ -269,15 +236,22 @@ namespace BeWithHer
             this.label7.TabIndex = 25;
             this.label7.Text = "年龄";
             // 
+            // dept_number
+            // 
+            this.dept_number.Location = new System.Drawing.Point(539, 111);
+            this.dept_number.Name = "dept_number";
+            this.dept_number.Size = new System.Drawing.Size(164, 25);
+            this.dept_number.TabIndex = 27;
+            // 
             // DoctorRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dept_number);
             this.Controls.Add(this.age_txtbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.adm_checkbox);
-            this.Controls.Add(this.department_combobox);
             this.Controls.Add(this.female_button);
             this.Controls.Add(this.male_button);
             this.Controls.Add(this.goback_button);
@@ -323,9 +297,9 @@ namespace BeWithHer
         private System.Windows.Forms.Button goback_button;
         private System.Windows.Forms.RadioButton male_button;
         private System.Windows.Forms.RadioButton female_button;
-        private System.Windows.Forms.ComboBox department_combobox;
         private System.Windows.Forms.CheckBox adm_checkbox;
         private System.Windows.Forms.TextBox age_txtbox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox dept_number;
     }
 }

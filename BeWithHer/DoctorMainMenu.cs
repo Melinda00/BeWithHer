@@ -16,5 +16,20 @@ namespace BeWithHer
         {
             InitializeComponent();
         }
+
+
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.CurrentCredential = null;
+            new LogIn().Show();
+        }
+
+        private void change_password_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PasswordChange().Show();
+        }
     }
 }
