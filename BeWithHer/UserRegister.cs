@@ -30,7 +30,9 @@ namespace BeWithHer
             {
                 BeWithHerConnector.ExecuteNonQuery(cmdString);
                 MessageBox.Show("注册成功");
-                Program.SwitchForm<LogIn>(this);
+                this.Hide();
+                new LogIn().Show();
+                
             }
             catch (Exception ex)
             {
@@ -96,7 +98,8 @@ namespace BeWithHer
 
         private void goback_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<LogIn>(this);
+            this.Hide();
+            new LogIn().Show();
         }
     }
 }

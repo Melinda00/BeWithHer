@@ -31,11 +31,15 @@ namespace BeWithHer
             List<object[]> doctorResult = BeWithHerConnector.ExecuteQuery(doctorCmd);
             if (Convert.ToInt32(userResult[0][0]) == 1)
             {
-                Program.SwitchForm<UserMainMenu>(this);
+                this.Hide();
+                new UserMainMenu().Show();
+                Program.CurrentCredential = new Credential() { ID = uid_txtbox.Text, IsUser = true };
             }
             else if(Convert.ToInt32(doctorResult[0][0]) == 1)
             {
-                Program.SwitchForm<DoctorMainMenu>(this);
+                this.Hide();
+                new DoctorMainMenu().Show();
+                Program.CurrentCredential = new Credential() { ID = uid_txtbox.Text, IsUser = false };
             }
             else
             {
@@ -45,8 +49,19 @@ namespace BeWithHer
 
         private void register_button_Click(object sender, EventArgs e)
         {
-            //Program.SwitchForm<RegisterSelector>(this);
-            Program.CreateFormDialog<RegisterSelector>(this);
+            DialogResult dialogResult = (new RegisterSelector()).ShowDialog();
+            if(dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                new UserRegister().Show();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+                this.Hide();
+                new DoctorRegister().Show();
+            }
+
+
         }
     }
 }

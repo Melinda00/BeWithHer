@@ -37,33 +37,33 @@ namespace BeWithHer
             // 
             // user_button
             // 
+            this.user_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.user_button.Location = new System.Drawing.Point(29, 143);
             this.user_button.Name = "user_button";
             this.user_button.Size = new System.Drawing.Size(80, 32);
             this.user_button.TabIndex = 0;
             this.user_button.Text = "用户";
             this.user_button.UseVisualStyleBackColor = true;
-            this.user_button.Click += new System.EventHandler(this.user_button_Click);
             // 
             // doctor_button
             // 
+            this.doctor_button.DialogResult = System.Windows.Forms.DialogResult.No;
             this.doctor_button.Location = new System.Drawing.Point(166, 143);
             this.doctor_button.Name = "doctor_button";
             this.doctor_button.Size = new System.Drawing.Size(81, 32);
             this.doctor_button.TabIndex = 1;
             this.doctor_button.Text = "医生";
             this.doctor_button.UseVisualStyleBackColor = true;
-            this.doctor_button.Click += new System.EventHandler(this.doctor_button_Click);
             // 
             // cancel_button
             // 
+            this.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancel_button.Location = new System.Drawing.Point(301, 143);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(83, 32);
             this.cancel_button.TabIndex = 2;
             this.cancel_button.Text = "返回";
             this.cancel_button.UseVisualStyleBackColor = true;
-            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // selector_label
             // 

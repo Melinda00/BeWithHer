@@ -28,15 +28,16 @@ namespace BeWithHer
             if (adm_checkbox.Checked) adm = "T";
             string dept = department_combobox.Items[department_combobox.SelectedIndex].ToString();
 
-            string cmd = String.Format("insert into DOCTOR values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');",
-                uid_txtbox.Text, password_txtbox.Text, name_txtbox.Text, sex, 
+            string cmd = String.Format("insert into DOCTOR values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}');",
+                uid_txtbox.Text, password_txtbox.Text, name_txtbox.Text, sex, age_txtbox.Text,
                 dept, phone_txtbox.Text, remark_txtbox.Text, adm);
 
             try
             {
                 BeWithHerConnector.ExecuteNonQuery(cmd);
                 MessageBox.Show("注册成功");
-                Program.SwitchForm<LogIn>(this);
+                this.Hide();
+                new LogIn().Show();
             }
             catch (Exception ex)
             {
@@ -46,7 +47,8 @@ namespace BeWithHer
 
         private void goback_button_Click(object sender, EventArgs e)
         {
-            Program.SwitchForm<LogIn>(this);
+            this.Hide();
+            new LogIn().Show();
         }
 
         private bool ValidRegisterArgs()
@@ -84,6 +86,12 @@ namespace BeWithHer
             if (!male_button.Checked && !female_button.Checked)
             {
                 MessageBox.Show("性别不能为空");
+                return false;
+            }
+
+            if (!RegisterUtils.ValidAge(age_txtbox.Text))
+            {
+                MessageBox.Show("无效年龄:" + age_txtbox.Text);
                 return false;
             }
 

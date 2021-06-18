@@ -16,5 +16,12 @@ namespace BeWithHer
         {
             InitializeComponent();
         }
+
+        private void start_con_button_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //new NewConsult().Show();
+        }
+
     }
 }

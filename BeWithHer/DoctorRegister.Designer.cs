@@ -49,6 +49,8 @@ namespace BeWithHer
             this.female_button = new System.Windows.Forms.RadioButton();
             this.department_combobox = new System.Windows.Forms.ComboBox();
             this.adm_checkbox = new System.Windows.Forms.CheckBox();
+            this.age_txtbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // doctor_register_label
@@ -251,11 +253,29 @@ namespace BeWithHer
             this.adm_checkbox.TabIndex = 24;
             this.adm_checkbox.UseVisualStyleBackColor = true;
             // 
+            // age_txtbox
+            // 
+            this.age_txtbox.Location = new System.Drawing.Point(169, 277);
+            this.age_txtbox.Name = "age_txtbox";
+            this.age_txtbox.Size = new System.Drawing.Size(164, 25);
+            this.age_txtbox.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(90, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "年龄";
+            // 
             // DoctorRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.age_txtbox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.adm_checkbox);
             this.Controls.Add(this.department_combobox);
             this.Controls.Add(this.female_button);
@@ -305,5 +325,7 @@ namespace BeWithHer
         private System.Windows.Forms.RadioButton female_button;
         private System.Windows.Forms.ComboBox department_combobox;
         private System.Windows.Forms.CheckBox adm_checkbox;
+        private System.Windows.Forms.TextBox age_txtbox;
+        private System.Windows.Forms.Label label7;
     }
 }

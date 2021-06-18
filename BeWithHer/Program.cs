@@ -8,27 +8,6 @@ namespace BeWithHer
 {
     static class Program
     {
-        public static void SwitchForm<T>(Form formToClose, params object[] args)
-        {
-            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
-            mAppContext.MainForm = newForm;
-            formToClose.Close();
-            newForm.Show();
-        }
-
-        public static void SwitchForm<T>(Form[] formToClose, params object[] args)
-        {
-            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
-            mAppContext.MainForm = newForm;
-            foreach(Form f in formToClose) f.Close();
-            newForm.Show();
-        }
-
-        public static void CreateFormDialog<T>(params object[] args)
-        {
-            Form newForm = Activator.CreateInstance(typeof(T), args) as Form;
-            newForm.ShowDialog();
-        }
 
         /// <summary>
         /// 应用程序的主入口点。
@@ -39,13 +18,15 @@ namespace BeWithHer
             BeWithHerConnector.Connect();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            mAppContext.MainForm = new LogIn();
-            Application.Run(mAppContext);
+            CurrentCredential = null;
+            Application.Run(new LogIn());
             BeWithHerConnector.Disconnect();
         }
 
+        public static Credential CurrentCredential { get; set; }
 
 
-        private static ApplicationContext mAppContext = new ApplicationContext();
+
+
     }
 }

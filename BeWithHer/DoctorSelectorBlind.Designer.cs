@@ -34,19 +34,22 @@ namespace BeWithHer
             // 
             // start_con_button
             // 
-            this.start_con_button.Location = new System.Drawing.Point(437, 282);
+            this.start_con_button.Location = new System.Drawing.Point(583, 352);
+            this.start_con_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.start_con_button.Name = "start_con_button";
-            this.start_con_button.Size = new System.Drawing.Size(75, 23);
+            this.start_con_button.Size = new System.Drawing.Size(100, 29);
             this.start_con_button.TabIndex = 1;
             this.start_con_button.Text = "开始咨询";
             this.start_con_button.UseVisualStyleBackColor = true;
+            this.start_con_button.Click += new System.EventHandler(this.start_con_button_Click);
             // 
             // DoctorSelectorBlind
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.start_con_button);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DoctorSelectorBlind";
             this.Text = "DoctorSelectorBlind";
             this.ResumeLayout(false);
