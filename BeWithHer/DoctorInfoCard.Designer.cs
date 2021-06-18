@@ -44,12 +44,14 @@ namespace BeWithHer
             this.label12 = new System.Windows.Forms.Label();
             this.adm_label = new System.Windows.Forms.Label();
             this.intro_label = new System.Windows.Forms.Label();
+            this.verify_button = new System.Windows.Forms.Button();
+            this.resample_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(319, 367);
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            this.button1.Location = new System.Drawing.Point(339, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 45);
             this.button1.TabIndex = 0;
@@ -183,11 +185,35 @@ namespace BeWithHer
             this.intro_label.TabIndex = 14;
             this.intro_label.Text = "placeholder";
             // 
+            // verify_button
+            // 
+            this.verify_button.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.verify_button.Location = new System.Drawing.Point(556, 357);
+            this.verify_button.Name = "verify_button";
+            this.verify_button.Size = new System.Drawing.Size(160, 45);
+            this.verify_button.TabIndex = 15;
+            this.verify_button.Text = "确认";
+            this.verify_button.UseVisualStyleBackColor = true;
+            this.verify_button.Visible = false;
+            // 
+            // resample_button
+            // 
+            this.resample_button.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.resample_button.Location = new System.Drawing.Point(102, 357);
+            this.resample_button.Name = "resample_button";
+            this.resample_button.Size = new System.Drawing.Size(160, 45);
+            this.resample_button.TabIndex = 16;
+            this.resample_button.Text = "重选";
+            this.resample_button.UseVisualStyleBackColor = true;
+            this.resample_button.Visible = false;
+            // 
             // DoctorInfoCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.resample_button);
+            this.Controls.Add(this.verify_button);
             this.Controls.Add(this.intro_label);
             this.Controls.Add(this.adm_label);
             this.Controls.Add(this.label12);
@@ -228,5 +254,7 @@ namespace BeWithHer
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label adm_label;
         private System.Windows.Forms.Label intro_label;
+        private System.Windows.Forms.Button verify_button;
+        private System.Windows.Forms.Button resample_button;
     }
 }

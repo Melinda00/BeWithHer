@@ -29,7 +29,6 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
-            this.start_con_button = new System.Windows.Forms.Button();
             this.doctor_info = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,17 +39,6 @@ namespace BeWithHer
             this.select = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.doctor_info)).BeginInit();
             this.SuspendLayout();
-            // 
-            // start_con_button
-            // 
-            this.start_con_button.Location = new System.Drawing.Point(293, 362);
-            this.start_con_button.Margin = new System.Windows.Forms.Padding(4);
-            this.start_con_button.Name = "start_con_button";
-            this.start_con_button.Size = new System.Drawing.Size(229, 55);
-            this.start_con_button.TabIndex = 0;
-            this.start_con_button.Text = "开始咨询";
-            this.start_con_button.UseVisualStyleBackColor = true;
-            this.start_con_button.Click += new System.EventHandler(this.start_con_button_Click);
             // 
             // doctor_info
             // 
@@ -65,11 +53,11 @@ namespace BeWithHer
             this.dept,
             this.detail,
             this.select});
-            this.doctor_info.Location = new System.Drawing.Point(3, 3);
+            this.doctor_info.Location = new System.Drawing.Point(-4, 0);
             this.doctor_info.Name = "doctor_info";
             this.doctor_info.RowHeadersWidth = 51;
             this.doctor_info.RowTemplate.Height = 27;
-            this.doctor_info.Size = new System.Drawing.Size(792, 327);
+            this.doctor_info.Size = new System.Drawing.Size(803, 448);
             this.doctor_info.TabIndex = 1;
             this.doctor_info.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doctor_info_CellContentClick);
             // 
@@ -123,7 +111,6 @@ namespace BeWithHer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.doctor_info);
-            this.Controls.Add(this.start_con_button);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DoctorSelector";
             this.Text = "DoctorSelector";
@@ -134,8 +121,6 @@ namespace BeWithHer
         }
 
         #endregion
-
-        private System.Windows.Forms.Button start_con_button;
         private System.Windows.Forms.DataGridView doctor_info;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;

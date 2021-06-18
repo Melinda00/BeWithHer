@@ -43,7 +43,7 @@ namespace BeWithHer
             // goback_button
             // 
             this.goback_button.DialogResult = System.Windows.Forms.DialogResult.Ignore;
-            this.goback_button.Location = new System.Drawing.Point(584, 369);
+            this.goback_button.Location = new System.Drawing.Point(423, 214);
             this.goback_button.Margin = new System.Windows.Forms.Padding(4);
             this.goback_button.Name = "goback_button";
             this.goback_button.Size = new System.Drawing.Size(100, 29);
@@ -54,10 +54,10 @@ namespace BeWithHer
             // view_doctor_button
             // 
             this.view_doctor_button.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.view_doctor_button.Location = new System.Drawing.Point(312, 75);
+            this.view_doctor_button.Location = new System.Drawing.Point(312, 38);
             this.view_doctor_button.Margin = new System.Windows.Forms.Padding(4);
             this.view_doctor_button.Name = "view_doctor_button";
-            this.view_doctor_button.Size = new System.Drawing.Size(372, 29);
+            this.view_doctor_button.Size = new System.Drawing.Size(179, 33);
             this.view_doctor_button.TabIndex = 1;
             this.view_doctor_button.Text = "开始筛选";
             this.view_doctor_button.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@ namespace BeWithHer
             // doctor_table_button
             // 
             this.doctor_table_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.doctor_table_button.Location = new System.Drawing.Point(312, 139);
+            this.doctor_table_button.Location = new System.Drawing.Point(312, 79);
             this.doctor_table_button.Margin = new System.Windows.Forms.Padding(4);
             this.doctor_table_button.Name = "doctor_table_button";
-            this.doctor_table_button.Size = new System.Drawing.Size(372, 29);
+            this.doctor_table_button.Size = new System.Drawing.Size(179, 34);
             this.doctor_table_button.TabIndex = 2;
             this.doctor_table_button.Text = "开始盲选";
             this.doctor_table_button.UseVisualStyleBackColor = true;
@@ -76,19 +76,19 @@ namespace BeWithHer
             // last_doctor_button
             // 
             this.last_doctor_button.DialogResult = System.Windows.Forms.DialogResult.Abort;
-            this.last_doctor_button.Location = new System.Drawing.Point(312, 199);
+            this.last_doctor_button.Location = new System.Drawing.Point(312, 121);
             this.last_doctor_button.Margin = new System.Windows.Forms.Padding(4);
             this.last_doctor_button.Name = "last_doctor_button";
-            this.last_doctor_button.Size = new System.Drawing.Size(372, 29);
+            this.last_doctor_button.Size = new System.Drawing.Size(179, 29);
             this.last_doctor_button.TabIndex = 3;
-            this.last_doctor_button.Text = "不纠结，跟上次一样";
+            this.last_doctor_button.Text = "跟上次一样";
             this.last_doctor_button.UseVisualStyleBackColor = true;
             // 
             // doctor_table_label
             // 
             this.doctor_table_label.AutoSize = true;
             this.doctor_table_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doctor_table_label.Location = new System.Drawing.Point(37, 140);
+            this.doctor_table_label.Location = new System.Drawing.Point(37, 79);
             this.doctor_table_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.doctor_table_label.Name = "doctor_table_label";
             this.doctor_table_label.Size = new System.Drawing.Size(252, 25);
@@ -99,7 +99,7 @@ namespace BeWithHer
             // 
             this.last_doctor_label.AutoSize = true;
             this.last_doctor_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.last_doctor_label.Location = new System.Drawing.Point(80, 200);
+            this.last_doctor_label.Location = new System.Drawing.Point(37, 117);
             this.last_doctor_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.last_doctor_label.Name = "last_doctor_label";
             this.last_doctor_label.Size = new System.Drawing.Size(212, 25);
@@ -110,7 +110,7 @@ namespace BeWithHer
             // 
             this.view_doctor_label.AutoSize = true;
             this.view_doctor_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.view_doctor_label.Location = new System.Drawing.Point(37, 81);
+            this.view_doctor_label.Location = new System.Drawing.Point(37, 42);
             this.view_doctor_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.view_doctor_label.Name = "view_doctor_label";
             this.view_doctor_label.Size = new System.Drawing.Size(252, 25);
@@ -120,19 +120,19 @@ namespace BeWithHer
             // random_doctor_button
             // 
             this.random_doctor_button.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.random_doctor_button.Location = new System.Drawing.Point(312, 262);
+            this.random_doctor_button.Location = new System.Drawing.Point(312, 158);
             this.random_doctor_button.Margin = new System.Windows.Forms.Padding(4);
             this.random_doctor_button.Name = "random_doctor_button";
-            this.random_doctor_button.Size = new System.Drawing.Size(372, 29);
+            this.random_doctor_button.Size = new System.Drawing.Size(179, 31);
             this.random_doctor_button.TabIndex = 7;
-            this.random_doctor_button.Text = "不纠结，开始随机匹配";
+            this.random_doctor_button.Text = "随机匹配";
             this.random_doctor_button.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(80, 264);
+            this.label1.Location = new System.Drawing.Point(37, 155);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 25);
@@ -143,7 +143,7 @@ namespace BeWithHer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 432);
+            this.ClientSize = new System.Drawing.Size(536, 256);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.random_doctor_button);
             this.Controls.Add(this.view_doctor_label);

@@ -12,10 +12,12 @@ namespace BeWithHer
 {
     public partial class DoctorInfoCard : Form
     {
-        public DoctorInfoCard(Credential doctorCredential)
+        public DoctorInfoCard(Credential doctorCredential, bool enableSample = false)
         {
             InitializeComponent();
             mDoctorCredential = doctorCredential;
+            verify_button.Enabled = verify_button.Visible = enableSample;
+            resample_button.Enabled = resample_button.Visible = enableSample;
         }
 
         private void DoctorInfoCard_Load(object sender, EventArgs e)

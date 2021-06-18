@@ -17,30 +17,16 @@ namespace BeWithHer
             InitializeComponent();
         }
 
-        private void start_con_button_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            //new NewConsult().Show();
-        }
 
         private void DoctorSelector_Load(object sender, EventArgs e)
         {
             
-            string cmd = "select DOC_ID, DOC_NAME, DOC_SEX, DOC_AGE, DOC_DEPT, DOC_PHONE, DOC_CTER, DOC_REMARK from DOCTOR;";
+            string cmd = "select * from DOCTOR;";
             List<object[]> result = BeWithHerConnector.ExecuteQuery(cmd);
-            
+            mDoctorCredentials = Credential.LoadDoctors(result);
             for (int i = 0; i < result.Count; i++)
             {
-                Credential doctorCredential = new Credential();
-                doctorCredential.ID = Convert.ToString(result[i][0]);
-                doctorCredential.Name = Convert.ToString(result[i][1]);
-                doctorCredential.Sex = Convert.ToString(result[i][2]);
-                doctorCredential.Age = Convert.ToString(result[i][3]);
-                doctorCredential.Department = Convert.ToString(result[i][4]);
-                doctorCredential.Phone = Convert.ToString(result[i][5]);
-                doctorCredential.Adm = Convert.ToString(result[i][6]) == "T";
-                doctorCredential.Remark = Convert.ToString(result[i][7]);
-                mDoctorCredentials.Add(doctorCredential);
+                Credential doctorCredential = mDoctorCredentials[i];
 
                 doctor_info.Rows.Add();
                 doctor_info.Rows[doctor_info.Rows.Count - 1].Cells["id"].Value = doctorCredential.ID;

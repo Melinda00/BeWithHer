@@ -35,6 +35,7 @@ namespace BeWithHer
                 case DialogResult.Abort:  //last
                     break;
                 case DialogResult.Retry:  //random
+                    OnRandomSelectDoctor();
                     break;
                 case DialogResult.Ignore: //go back
                     break;
@@ -49,6 +50,27 @@ namespace BeWithHer
             this.Hide();
             new LogIn().Show();
             Program.CurrentCredential = null;
+        }
+
+        private void OnRandomSelectDoctor()
+        {
+            int doctorCount = Convert.ToInt32(BeWithHerConnector.ExecuteQuery("select count(DOC_ID) from DOCTOR;")[0][0]);
+            int index = Program.AppRandom.Next(doctorCount);
+            string cmd = String.Format("select * from DOCTOR limit 1 offset {0};", Convert.ToString(index));
+            object[] doctorInfo = BeWithHerConnector.ExecuteQuery(cmd)[0];
+            Credential doctor = Credential.LoadDoctor(doctorInfo);
+  
+            DialogResult dialogResult = new DoctorInfoCard(doctor, true).ShowDialog();
+            if(dialogResult == DialogResult.OK)
+            {
+                this.Hide();
+                new NewConsult(doctor).Show();
+            }
+            else if(dialogResult == DialogResult.Retry)
+            {
+                OnRandomSelectDoctor();
+            }
+
         }
     }
 }
