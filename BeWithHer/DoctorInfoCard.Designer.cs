@@ -40,12 +40,14 @@ namespace BeWithHer
             this.sex_label = new System.Windows.Forms.Label();
             this.age_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.adm_label = new System.Windows.Forms.Label();
             this.intro_label = new System.Windows.Forms.Label();
             this.verify_button = new System.Windows.Forms.Button();
             this.resample_button = new System.Windows.Forms.Button();
+            this.dept_name = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.hospital = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -81,9 +83,9 @@ namespace BeWithHer
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(57, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "科室：";
+            this.label3.Text = "科室号：";
             // 
             // label4
             // 
@@ -148,37 +150,19 @@ namespace BeWithHer
             this.name_label.TabIndex = 6;
             this.name_label.Text = "placeholder";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(57, 311);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 15);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "是否为管理员：";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(413, 48);
+            this.label12.Location = new System.Drawing.Point(400, 150);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 15);
             this.label12.TabIndex = 12;
             this.label12.Text = "简介：";
             // 
-            // adm_label
-            // 
-            this.adm_label.AutoSize = true;
-            this.adm_label.Location = new System.Drawing.Point(199, 311);
-            this.adm_label.Name = "adm_label";
-            this.adm_label.Size = new System.Drawing.Size(95, 15);
-            this.adm_label.TabIndex = 13;
-            this.adm_label.Text = "placeholder";
-            // 
             // intro_label
             // 
             this.intro_label.AutoSize = true;
-            this.intro_label.Location = new System.Drawing.Point(490, 48);
+            this.intro_label.Location = new System.Drawing.Point(477, 150);
             this.intro_label.MaximumSize = new System.Drawing.Size(150, 0);
             this.intro_label.Name = "intro_label";
             this.intro_label.Size = new System.Drawing.Size(95, 15);
@@ -207,17 +191,55 @@ namespace BeWithHer
             this.resample_button.UseVisualStyleBackColor = true;
             this.resample_button.Visible = false;
             // 
+            // dept_name
+            // 
+            this.dept_name.AutoSize = true;
+            this.dept_name.Location = new System.Drawing.Point(477, 48);
+            this.dept_name.Name = "dept_name";
+            this.dept_name.Size = new System.Drawing.Size(95, 15);
+            this.dept_name.TabIndex = 18;
+            this.dept_name.Text = "placeholder";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(401, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 15);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "科室名：";
+            // 
+            // hospital
+            // 
+            this.hospital.AutoSize = true;
+            this.hospital.Location = new System.Drawing.Point(477, 97);
+            this.hospital.Name = "hospital";
+            this.hospital.Size = new System.Drawing.Size(95, 15);
+            this.hospital.TabIndex = 20;
+            this.hospital.Text = "placeholder";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(401, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 15);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "医院：";
+            // 
             // DoctorInfoCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.hospital);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dept_name);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.resample_button);
             this.Controls.Add(this.verify_button);
             this.Controls.Add(this.intro_label);
-            this.Controls.Add(this.adm_label);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.phone_label);
             this.Controls.Add(this.dept_label);
             this.Controls.Add(this.sex_label);
@@ -250,11 +272,13 @@ namespace BeWithHer
         private System.Windows.Forms.Label sex_label;
         private System.Windows.Forms.Label age_label;
         private System.Windows.Forms.Label name_label;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label adm_label;
         private System.Windows.Forms.Label intro_label;
         private System.Windows.Forms.Button verify_button;
         private System.Windows.Forms.Button resample_button;
+        private System.Windows.Forms.Label dept_name;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label hospital;
+        private System.Windows.Forms.Label label9;
     }
 }

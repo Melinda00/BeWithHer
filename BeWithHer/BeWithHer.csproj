@@ -125,6 +125,7 @@
       <DependentUpon>ConsultInfoViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Credential.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="DoctorInfoCard.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -27,8 +27,17 @@ namespace BeWithHer
             sex_label.Text = mDoctorCredential.Sex;
             dept_label.Text = mDoctorCredential.Department;
             phone_label.Text = mDoctorCredential.Phone;
-            adm_label.Text = mDoctorCredential.Adm ? "是" : "否";
+            //adm_label.Text = mDoctorCredential.Adm ? "是" : "否";
             intro_label.Text = mDoctorCredential.Remark;
+
+            string deptID = mDoctorCredential.Department;
+            Department department = Department.LoadDepartment(deptID);
+            dept_name.Text = department.Name;
+            hospital.Text = department.Hospital;
+            //dept_address.Text = department.Address;
+            //dept_phone.Text = department.Phone;
+
+
         }
 
         Credential mDoctorCredential = null;
