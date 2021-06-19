@@ -29,42 +29,65 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
-            this.doctor_info = new System.Windows.Forms.DataGridView();
-            this.D_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dept_info = new System.Windows.Forms.DataGridView();
+            this.goback = new System.Windows.Forms.Button();
+            this.new_dept_button = new System.Windows.Forms.Button();
+            this.d_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_hospital = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modify = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.goback = new System.Windows.Forms.Button();
-            this.new_dept_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor_info)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dept_info)).BeginInit();
             this.SuspendLayout();
             // 
-            // doctor_info
+            // dept_info
             // 
-            this.doctor_info.AllowUserToAddRows = false;
-            this.doctor_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.doctor_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.doctor_info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.D_ID,
+            this.dept_info.AllowUserToAddRows = false;
+            this.dept_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dept_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dept_info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.d_id,
             this.d_name,
             this.d_hospital,
             this.d_addr,
             this.d_phone,
             this.modify});
-            this.doctor_info.Location = new System.Drawing.Point(12, 1);
-            this.doctor_info.Name = "doctor_info";
-            this.doctor_info.RowHeadersWidth = 51;
-            this.doctor_info.RowTemplate.Height = 27;
-            this.doctor_info.Size = new System.Drawing.Size(899, 283);
-            this.doctor_info.TabIndex = 2;
+            this.dept_info.Location = new System.Drawing.Point(12, 1);
+            this.dept_info.Name = "dept_info";
+            this.dept_info.RowHeadersWidth = 51;
+            this.dept_info.RowTemplate.Height = 27;
+            this.dept_info.Size = new System.Drawing.Size(899, 283);
+            this.dept_info.TabIndex = 2;
+            this.dept_info.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dept_info_CellContentClick);
             // 
-            // D_ID
+            // goback
             // 
-            this.D_ID.HeaderText = "科室号";
-            this.D_ID.MinimumWidth = 6;
-            this.D_ID.Name = "D_ID";
+            this.goback.Location = new System.Drawing.Point(755, 343);
+            this.goback.Name = "goback";
+            this.goback.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.goback.Size = new System.Drawing.Size(147, 43);
+            this.goback.TabIndex = 3;
+            this.goback.Text = "返回主界面";
+            this.goback.UseVisualStyleBackColor = true;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
+            // 
+            // new_dept_button
+            // 
+            this.new_dept_button.Location = new System.Drawing.Point(558, 343);
+            this.new_dept_button.Name = "new_dept_button";
+            this.new_dept_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.new_dept_button.Size = new System.Drawing.Size(147, 43);
+            this.new_dept_button.TabIndex = 4;
+            this.new_dept_button.Text = "新建科室信息";
+            this.new_dept_button.UseVisualStyleBackColor = true;
+            this.new_dept_button.Click += new System.EventHandler(this.new_dept_button_Click);
+            // 
+            // d_id
+            // 
+            this.d_id.HeaderText = "科室号";
+            this.d_id.MinimumWidth = 6;
+            this.d_id.Name = "d_id";
             // 
             // d_name
             // 
@@ -96,26 +119,6 @@ namespace BeWithHer
             this.modify.MinimumWidth = 6;
             this.modify.Name = "modify";
             // 
-            // goback
-            // 
-            this.goback.Location = new System.Drawing.Point(755, 343);
-            this.goback.Name = "goback";
-            this.goback.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.goback.Size = new System.Drawing.Size(147, 43);
-            this.goback.TabIndex = 3;
-            this.goback.Text = "返回主界面";
-            this.goback.UseVisualStyleBackColor = true;
-            // 
-            // new_dept_button
-            // 
-            this.new_dept_button.Location = new System.Drawing.Point(558, 343);
-            this.new_dept_button.Name = "new_dept_button";
-            this.new_dept_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.new_dept_button.Size = new System.Drawing.Size(147, 43);
-            this.new_dept_button.TabIndex = 4;
-            this.new_dept_button.Text = "新建科室信息";
-            this.new_dept_button.UseVisualStyleBackColor = true;
-            // 
             // DeptList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -123,24 +126,25 @@ namespace BeWithHer
             this.ClientSize = new System.Drawing.Size(935, 450);
             this.Controls.Add(this.new_dept_button);
             this.Controls.Add(this.goback);
-            this.Controls.Add(this.doctor_info);
+            this.Controls.Add(this.dept_info);
             this.Name = "DeptList";
             this.Text = "DeptList";
-            ((System.ComponentModel.ISupportInitialize)(this.doctor_info)).EndInit();
+            this.Load += new System.EventHandler(this.DeptList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dept_info)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView doctor_info;
+        private System.Windows.Forms.DataGridView dept_info;
         private System.Windows.Forms.Button goback;
-        private System.Windows.Forms.DataGridViewTextBoxColumn D_ID;
+        private System.Windows.Forms.Button new_dept_button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn d_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn d_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn d_hospital;
         private System.Windows.Forms.DataGridViewTextBoxColumn d_addr;
         private System.Windows.Forms.DataGridViewTextBoxColumn d_phone;
         private System.Windows.Forms.DataGridViewButtonColumn modify;
-        private System.Windows.Forms.Button new_dept_button;
     }
 }

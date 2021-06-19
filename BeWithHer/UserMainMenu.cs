@@ -99,5 +99,10 @@ namespace BeWithHer
             new DoctorSelector(doctors).Show();
 
         }
+
+        private void about_us_Click(object sender, EventArgs e)
+        {
+            new AboutUs().ShowDialog();
+        }
     }
 }

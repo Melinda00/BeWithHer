@@ -37,9 +37,11 @@ namespace BeWithHer
             }
             else if(Convert.ToInt32(doctorResult[0][0]) == 1)
             {
+                string cmd = string.Format("select DOC_CTER from DOCTOR where DOC_ID = '{0}';", uid_txtbox.Text);
+                bool adm = Convert.ToString(BeWithHerConnector.ExecuteQuery(cmd)[0][0]) == "T";
                 this.Hide();
                 new DoctorMainMenu().Show();
-                Program.CurrentCredential = new Credential() { ID = uid_txtbox.Text, IsUser = false };
+                Program.CurrentCredential = new Credential() { ID = uid_txtbox.Text, IsUser = false, Adm = adm };
             }
             else
             {

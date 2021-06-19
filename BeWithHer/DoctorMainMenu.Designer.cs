@@ -38,8 +38,8 @@ namespace BeWithHer
             this.history_con = new System.Windows.Forms.ToolStripMenuItem();
             this.myreport = new System.Windows.Forms.ToolStripMenuItem();
             this.con_report = new System.Windows.Forms.ToolStripMenuItem();
+            this.dept_mgmt = new System.Windows.Forms.ToolStripMenuItem();
             this.about_us = new System.Windows.Forms.ToolStripMenuItem();
-            this.科室管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,11 +51,11 @@ namespace BeWithHer
             this.myaccount,
             this.mycon,
             this.myreport,
-            this.科室管理ToolStripMenuItem,
+            this.dept_mgmt,
             this.about_us});
             this.menuStrip1.Location = new System.Drawing.Point(1, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(502, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(652, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,14 +71,14 @@ namespace BeWithHer
             // change_password
             // 
             this.change_password.Name = "change_password";
-            this.change_password.Size = new System.Drawing.Size(224, 26);
+            this.change_password.Size = new System.Drawing.Size(152, 26);
             this.change_password.Text = "修改密码";
             this.change_password.Click += new System.EventHandler(this.change_password_Click);
             // 
             // logout
             // 
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(224, 26);
+            this.logout.Size = new System.Drawing.Size(152, 26);
             this.logout.Text = "退出登录";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
@@ -94,14 +94,14 @@ namespace BeWithHer
             // unreplied_consult
             // 
             this.unreplied_consult.Name = "unreplied_consult";
-            this.unreplied_consult.Size = new System.Drawing.Size(224, 26);
+            this.unreplied_consult.Size = new System.Drawing.Size(167, 26);
             this.unreplied_consult.Text = "待回复咨询";
             this.unreplied_consult.Click += new System.EventHandler(this.unreplied_consult_Click);
             // 
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(224, 26);
+            this.history_con.Size = new System.Drawing.Size(167, 26);
             this.history_con.Text = "历史咨询";
             // 
             // myreport
@@ -115,20 +115,22 @@ namespace BeWithHer
             // con_report
             // 
             this.con_report.Name = "con_report";
-            this.con_report.Size = new System.Drawing.Size(224, 26);
+            this.con_report.Size = new System.Drawing.Size(152, 26);
             this.con_report.Text = "咨询统计";
+            // 
+            // dept_mgmt
+            // 
+            this.dept_mgmt.Name = "dept_mgmt";
+            this.dept_mgmt.Size = new System.Drawing.Size(83, 24);
+            this.dept_mgmt.Text = "科室管理";
+            this.dept_mgmt.Click += new System.EventHandler(this.dept_mgmt_Click);
             // 
             // about_us
             // 
             this.about_us.Name = "about_us";
             this.about_us.Size = new System.Drawing.Size(132, 24);
             this.about_us.Text = "关于BeWithHer";
-            // 
-            // 科室管理ToolStripMenuItem
-            // 
-            this.科室管理ToolStripMenuItem.Name = "科室管理ToolStripMenuItem";
-            this.科室管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.科室管理ToolStripMenuItem.Text = "科室管理";
+            this.about_us.Click += new System.EventHandler(this.about_us_Click);
             // 
             // DoctorMainMenu
             // 
@@ -157,6 +159,6 @@ namespace BeWithHer
         private System.Windows.Forms.ToolStripMenuItem about_us;
         private System.Windows.Forms.ToolStripMenuItem unreplied_consult;
         private System.Windows.Forms.ToolStripMenuItem change_password;
-        private System.Windows.Forms.ToolStripMenuItem 科室管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dept_mgmt;
     }
 }

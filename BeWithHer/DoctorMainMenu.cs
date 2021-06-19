@@ -43,5 +43,23 @@ namespace BeWithHer
             this.Hide();
             new ConsultHistory().Show();
         }
+
+        
+        private void dept_mgmt_Click(object sender, EventArgs e)
+        {
+            if(!Program.CurrentCredential.Adm)
+            {
+                MessageBox.Show("没有管理权限");
+                return;
+            }
+
+            this.Hide();
+            new DeptList().Show();
+        }
+
+        private void about_us_Click(object sender, EventArgs e)
+        {
+            new AboutUs().ShowDialog();
+        }
     }
 }
