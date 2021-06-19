@@ -17,13 +17,23 @@ namespace BeWithHer
             InitializeComponent();
         }
 
+        public DoctorSelector(List<Credential> doctors)
+        {
+            InitializeComponent();
+            mDoctorCredentials = doctors;
+            doctor_info.Columns[6].Visible = false;
+        }
+
 
         private void DoctorSelector_Load(object sender, EventArgs e)
         {
-            
-            string cmd = "select * from DOCTOR;";
-            List<object[]> result = BeWithHerConnector.ExecuteQuery(cmd);
-            mDoctorCredentials = Credential.LoadDoctors(result);
+            if(mDoctorCredentials == null)
+            {
+                string cmd = "select * from DOCTOR;";
+                List<object[]> result = BeWithHerConnector.ExecuteQuery(cmd);
+                mDoctorCredentials = Credential.LoadDoctors(result);
+            }
+
             for (int i = 0; i < mDoctorCredentials.Count; i++)
             {
                 Credential doctorCredential = mDoctorCredentials[i];
@@ -62,7 +72,7 @@ namespace BeWithHer
         }
 
 
-        private List<Credential> mDoctorCredentials = new List<Credential>();
+        private List<Credential> mDoctorCredentials = null;
     }
 
     

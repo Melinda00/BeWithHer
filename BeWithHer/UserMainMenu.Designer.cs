@@ -168,8 +168,9 @@ namespace BeWithHer
             // contact_doctor
             // 
             this.contact_doctor.Name = "contact_doctor";
-            this.contact_doctor.Size = new System.Drawing.Size(182, 26);
+            this.contact_doctor.Size = new System.Drawing.Size(224, 26);
             this.contact_doctor.Text = "联系我的医生";
+            this.contact_doctor.Click += new System.EventHandler(this.contact_doctor_Click);
             // 
             // myreport
             // 

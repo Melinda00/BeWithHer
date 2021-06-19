@@ -90,5 +90,14 @@ namespace BeWithHer
             this.Hide();
             new ConsultHistory().Show();
         }
+
+        private void contact_doctor_Click(object sender, EventArgs e)
+        {
+            string cmd = string.Format("select * from DOCTOR where DOC_ID in (select DOC_ID from CONINFO where U_ID = '{0}');", Program.CurrentCredential.ID);
+            List<Credential> doctors = Credential.LoadDoctors(BeWithHerConnector.ExecuteQuery(cmd));
+            this.Hide();
+            new DoctorSelector(doctors).Show();
+
+        }
     }
 }
