@@ -21,6 +21,7 @@ namespace BeWithHer
 
 
         private ConsultInfo mConsultInfo = null;
+   
 
         private void ConsultInfoViewer_Load(object sender, EventArgs e)
         {
@@ -31,8 +32,24 @@ namespace BeWithHer
             user_remark_txtbox.Text = mConsultInfo.UserRemark;
             user_remark_txtbox.ReadOnly = true;
             doctor_reply_txtbox.Text = mConsultInfo.DoctorReply;
-            doctor_reply_txtbox.ReadOnly = true;
+            doctor_reply_txtbox.ReadOnly = Program.CurrentCredential.IsUser;
+            reply_button.Enabled = reply_button.Visible = !Program.CurrentCredential.IsUser;
 
+        }
+
+        private void reply_button_Click(object sender, EventArgs e)
+        {
+            string rmk = user_remark_txtbox.Text + "@" + doctor_reply_txtbox.Text;
+            string cmd = string.Format("update CONINFO set CON_REMARK = '{0}' where BARCODE_ID = '{1}';", rmk, mConsultInfo.BarCode);
+            try
+            {
+                BeWithHerConnector.ExecuteNonQuery(cmd);
+                MessageBox.Show("回复完成");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

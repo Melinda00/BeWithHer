@@ -42,12 +42,13 @@ namespace BeWithHer
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.state = new System.Windows.Forms.Label();
+            this.reply_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ok_button
             // 
             this.ok_button.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ok_button.Location = new System.Drawing.Point(321, 354);
+            this.ok_button.Location = new System.Drawing.Point(271, 354);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(147, 43);
             this.ok_button.TabIndex = 0;
@@ -160,11 +161,25 @@ namespace BeWithHer
             this.state.TabIndex = 13;
             this.state.Text = "3";
             // 
+            // reply_button
+            // 
+            this.reply_button.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.reply_button.Enabled = false;
+            this.reply_button.Location = new System.Drawing.Point(477, 354);
+            this.reply_button.Name = "reply_button";
+            this.reply_button.Size = new System.Drawing.Size(147, 43);
+            this.reply_button.TabIndex = 15;
+            this.reply_button.Text = "回复";
+            this.reply_button.UseVisualStyleBackColor = true;
+            this.reply_button.Visible = false;
+            this.reply_button.Click += new System.EventHandler(this.reply_button_Click);
+            // 
             // ConsultInfoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reply_button);
             this.Controls.Add(this.state);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -201,5 +216,6 @@ namespace BeWithHer
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label state;
+        private System.Windows.Forms.Button reply_button;
     }
 }

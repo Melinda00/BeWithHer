@@ -35,7 +35,7 @@ namespace BeWithHer
             this.change_password = new System.Windows.Forms.ToolStripMenuItem();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
             this.mycon = new System.Windows.Forms.ToolStripMenuItem();
-            this.待回复ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unreplied_consult = new System.Windows.Forms.ToolStripMenuItem();
             this.reserve_con = new System.Windows.Forms.ToolStripMenuItem();
             this.history_con = new System.Windows.Forms.ToolStripMenuItem();
             this.myreport = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,49 +72,51 @@ namespace BeWithHer
             // change_myinfo
             // 
             this.change_myinfo.Name = "change_myinfo";
-            this.change_myinfo.Size = new System.Drawing.Size(224, 26);
+            this.change_myinfo.Size = new System.Drawing.Size(182, 26);
             this.change_myinfo.Text = "修改个人信息";
             // 
             // change_password
             // 
             this.change_password.Name = "change_password";
-            this.change_password.Size = new System.Drawing.Size(224, 26);
+            this.change_password.Size = new System.Drawing.Size(182, 26);
             this.change_password.Text = "修改密码";
             this.change_password.Click += new System.EventHandler(this.change_password_Click);
             // 
             // logout
             // 
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(224, 26);
+            this.logout.Size = new System.Drawing.Size(182, 26);
             this.logout.Text = "退出登录";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // mycon
             // 
             this.mycon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.待回复ToolStripMenuItem,
+            this.unreplied_consult,
             this.reserve_con,
             this.history_con});
             this.mycon.Name = "mycon";
             this.mycon.Size = new System.Drawing.Size(83, 24);
             this.mycon.Text = "我的咨询";
             // 
-            // 待回复ToolStripMenuItem
+            // unreplied_consult
             // 
-            this.待回复ToolStripMenuItem.Name = "待回复ToolStripMenuItem";
-            this.待回复ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
-            this.待回复ToolStripMenuItem.Text = "待回复咨询";
+            this.unreplied_consult.Name = "unreplied_consult";
+            this.unreplied_consult.Size = new System.Drawing.Size(224, 26);
+            this.unreplied_consult.Text = "待回复咨询";
+            this.unreplied_consult.Click += new System.EventHandler(this.unreplied_consult_Click);
             // 
             // reserve_con
             // 
             this.reserve_con.Name = "reserve_con";
-            this.reserve_con.Size = new System.Drawing.Size(167, 26);
+            this.reserve_con.Size = new System.Drawing.Size(224, 26);
             this.reserve_con.Text = "预约列表";
+            this.reserve_con.Click += new System.EventHandler(this.reserve_con_Click);
             // 
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(167, 26);
+            this.history_con.Size = new System.Drawing.Size(224, 26);
             this.history_con.Text = "历史咨询";
             // 
             // myreport
@@ -164,7 +166,7 @@ namespace BeWithHer
         private System.Windows.Forms.ToolStripMenuItem myreport;
         private System.Windows.Forms.ToolStripMenuItem con_report;
         private System.Windows.Forms.ToolStripMenuItem about_us;
-        private System.Windows.Forms.ToolStripMenuItem 待回复ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unreplied_consult;
         private System.Windows.Forms.ToolStripMenuItem change_password;
     }
 }
