@@ -132,6 +132,18 @@
     </Compile>
     <Compile Include="Credential.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="DeptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeptList.Designer.cs">
+      <DependentUpon>DeptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeptModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeptModify.Designer.cs">
+      <DependentUpon>DeptModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorInfoCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,12 +185,6 @@
     </Compile>
     <Compile Include="DoctorRegister.Designer.cs">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DoctorReserveList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoctorReserveList.Designer.cs">
-      <DependentUpon>DoctorReserveList.cs</DependentUpon>
     </Compile>
     <Compile Include="DoctorSelector.cs">
       <SubType>Form</SubType>
@@ -234,6 +240,12 @@
     <EmbeddedResource Include="ConsultInfoViewer.resx">
       <DependentUpon>ConsultInfoViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeptList.resx">
+      <DependentUpon>DeptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeptModify.resx">
+      <DependentUpon>DeptModify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorInfoCard.resx">
       <DependentUpon>DoctorInfoCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,9 +266,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorRegister.resx">
       <DependentUpon>DoctorRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoctorReserveList.resx">
-      <DependentUpon>DoctorReserveList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorSelector.resx">
       <DependentUpon>DoctorSelector.cs</DependentUpon>
