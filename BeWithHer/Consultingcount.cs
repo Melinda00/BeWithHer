@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace BeWithHer
 {
-    public partial class ConsultingReserve : Form
+    public partial class Consultingcount : Form
     {
-        public ConsultingReserve()
+        public Consultingcount()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UserMainMenu().Show();
         }
     }
 }

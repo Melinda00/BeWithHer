@@ -29,6 +29,7 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorSelector));
             this.doctor_info = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +38,7 @@ namespace BeWithHer
             this.dept = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.select = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.goback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.doctor_info)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace BeWithHer
             this.doctor_info.Name = "doctor_info";
             this.doctor_info.RowHeadersWidth = 51;
             this.doctor_info.RowTemplate.Height = 27;
-            this.doctor_info.Size = new System.Drawing.Size(803, 448);
+            this.doctor_info.Size = new System.Drawing.Size(803, 305);
             this.doctor_info.TabIndex = 1;
             this.doctor_info.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doctor_info_CellContentClick);
             // 
@@ -105,15 +107,27 @@ namespace BeWithHer
             this.select.Name = "select";
             this.select.Text = "";
             // 
+            // goback
+            // 
+            this.goback.Location = new System.Drawing.Point(619, 364);
+            this.goback.Name = "goback";
+            this.goback.Size = new System.Drawing.Size(123, 42);
+            this.goback.TabIndex = 2;
+            this.goback.Text = "返回主菜单";
+            this.goback.UseVisualStyleBackColor = true;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
+            // 
             // DoctorSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goback);
             this.Controls.Add(this.doctor_info);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DoctorSelector";
-            this.Text = "DoctorSelector";
+            this.Text = "选择您的咨询医生";
             this.Load += new System.EventHandler(this.DoctorSelector_Load);
             ((System.ComponentModel.ISupportInitialize)(this.doctor_info)).EndInit();
             this.ResumeLayout(false);
@@ -129,5 +143,6 @@ namespace BeWithHer
         private System.Windows.Forms.DataGridViewTextBoxColumn dept;
         private System.Windows.Forms.DataGridViewButtonColumn detail;
         private System.Windows.Forms.DataGridViewButtonColumn select;
+        private System.Windows.Forms.Button goback;
     }
 }

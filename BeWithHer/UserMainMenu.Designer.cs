@@ -30,6 +30,7 @@ namespace BeWithHer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMainMenu));
             this.menu_label = new System.Windows.Forms.Label();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -39,15 +40,15 @@ namespace BeWithHer
             this.mycon = new System.Windows.Forms.ToolStripMenuItem();
             this.new_consult = new System.Windows.Forms.ToolStripMenuItem();
             this.history_con = new System.Windows.Forms.ToolStripMenuItem();
-            this.reserve_con = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出咨询报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mydoctor = new System.Windows.Forms.ToolStripMenuItem();
-            this.reserve_doctor = new System.Windows.Forms.ToolStripMenuItem();
             this.contact_doctor = new System.Windows.Forms.ToolStripMenuItem();
             this.myreport = new System.Windows.Forms.ToolStripMenuItem();
             this.con_report = new System.Windows.Forms.ToolStripMenuItem();
             this.info_report = new System.Windows.Forms.ToolStripMenuItem();
             this.about_us = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -67,6 +68,7 @@ namespace BeWithHer
             // 
             // toolStripContainer1.ContentPanel
             // 
+            this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.Transparent;
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(801, 160);
             this.toolStripContainer1.Location = new System.Drawing.Point(1, 0);
@@ -108,14 +110,14 @@ namespace BeWithHer
             // change_myinfo
             // 
             this.change_myinfo.Name = "change_myinfo";
-            this.change_myinfo.Size = new System.Drawing.Size(182, 26);
-            this.change_myinfo.Text = "修改个人信息";
+            this.change_myinfo.Size = new System.Drawing.Size(152, 26);
+            this.change_myinfo.Text = "修改密码";
             this.change_myinfo.Click += new System.EventHandler(this.change_myinfo_Click);
             // 
             // logout
             // 
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(182, 26);
+            this.logout.Size = new System.Drawing.Size(152, 26);
             this.logout.Text = "退出登录";
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
@@ -124,7 +126,7 @@ namespace BeWithHer
             this.mycon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.new_consult,
             this.history_con,
-            this.reserve_con});
+            this.导出咨询报告ToolStripMenuItem});
             this.mycon.Name = "mycon";
             this.mycon.Size = new System.Drawing.Size(83, 24);
             this.mycon.Text = "我的咨询";
@@ -132,38 +134,30 @@ namespace BeWithHer
             // new_consult
             // 
             this.new_consult.Name = "new_consult";
-            this.new_consult.Size = new System.Drawing.Size(152, 26);
+            this.new_consult.Size = new System.Drawing.Size(182, 26);
             this.new_consult.Text = "新建咨询";
             this.new_consult.Click += new System.EventHandler(this.new_consult_Click);
             // 
             // history_con
             // 
             this.history_con.Name = "history_con";
-            this.history_con.Size = new System.Drawing.Size(152, 26);
+            this.history_con.Size = new System.Drawing.Size(182, 26);
             this.history_con.Text = "历史咨询";
             this.history_con.Click += new System.EventHandler(this.history_con_Click);
             // 
-            // reserve_con
+            // 导出咨询报告ToolStripMenuItem
             // 
-            this.reserve_con.Name = "reserve_con";
-            this.reserve_con.Size = new System.Drawing.Size(152, 26);
-            this.reserve_con.Text = "预约咨询";
-            this.reserve_con.Click += new System.EventHandler(this.reserve_con_Click);
+            this.导出咨询报告ToolStripMenuItem.Name = "导出咨询报告ToolStripMenuItem";
+            this.导出咨询报告ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.导出咨询报告ToolStripMenuItem.Text = "导出咨询报告";
             // 
             // mydoctor
             // 
             this.mydoctor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reserve_doctor,
             this.contact_doctor});
             this.mydoctor.Name = "mydoctor";
             this.mydoctor.Size = new System.Drawing.Size(83, 24);
             this.mydoctor.Text = "我的医生";
-            // 
-            // reserve_doctor
-            // 
-            this.reserve_doctor.Name = "reserve_doctor";
-            this.reserve_doctor.Size = new System.Drawing.Size(182, 26);
-            this.reserve_doctor.Text = "预约医生";
             // 
             // contact_doctor
             // 
@@ -184,13 +178,14 @@ namespace BeWithHer
             // con_report
             // 
             this.con_report.Name = "con_report";
-            this.con_report.Size = new System.Drawing.Size(182, 26);
+            this.con_report.Size = new System.Drawing.Size(224, 26);
             this.con_report.Text = "咨询统计";
+            this.con_report.Click += new System.EventHandler(this.con_report_Click);
             // 
             // info_report
             // 
             this.info_report.Name = "info_report";
-            this.info_report.Size = new System.Drawing.Size(182, 26);
+            this.info_report.Size = new System.Drawing.Size(224, 26);
             this.info_report.Text = "经期信息统计";
             // 
             // about_us
@@ -206,17 +201,30 @@ namespace BeWithHer
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("方正清刻本悦宋简体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(12, 419);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(371, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "BeWithHer代表每一个你，始终与你在一起";
+            // 
             // UserMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.menu_label);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserMainMenu";
-            this.Text = "UserMainMenu";
+            this.Text = "开始你的记录和咨询之旅吧~";
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
@@ -239,14 +247,14 @@ namespace BeWithHer
         private System.Windows.Forms.ToolStripMenuItem mycon;
         private System.Windows.Forms.ToolStripMenuItem new_consult;
         private System.Windows.Forms.ToolStripMenuItem history_con;
-        private System.Windows.Forms.ToolStripMenuItem reserve_con;
         private System.Windows.Forms.ToolStripMenuItem mydoctor;
-        private System.Windows.Forms.ToolStripMenuItem reserve_doctor;
         private System.Windows.Forms.ToolStripMenuItem contact_doctor;
         private System.Windows.Forms.ToolStripMenuItem myreport;
         private System.Windows.Forms.ToolStripMenuItem about_us;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem con_report;
         private System.Windows.Forms.ToolStripMenuItem info_report;
+        private System.Windows.Forms.ToolStripMenuItem 导出咨询报告ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

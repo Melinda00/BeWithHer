@@ -59,5 +59,11 @@ namespace BeWithHer
             mDoctorButtons = new Button[] { button0, button1, button2, button3, button4, button5, button6, button7, button8, button9 };
             foreach (Button button in mDoctorButtons) button.Enabled = button.Visible = false;
         }
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UserMainMenu().Show();
+        }
     }
 }

@@ -29,11 +29,13 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultHistory));
             this.consult_history = new System.Windows.Forms.DataGridView();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.goback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.consult_history)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@ namespace BeWithHer
             this.consult_history.Name = "consult_history";
             this.consult_history.RowHeadersWidth = 51;
             this.consult_history.RowTemplate.Height = 27;
-            this.consult_history.Size = new System.Drawing.Size(803, 448);
+            this.consult_history.Size = new System.Drawing.Size(800, 304);
             this.consult_history.TabIndex = 2;
             this.consult_history.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.consult_history_CellContentClick);
             // 
@@ -80,15 +82,27 @@ namespace BeWithHer
             this.detail.Name = "detail";
             this.detail.Text = "";
             // 
+            // goback
+            // 
+            this.goback.Location = new System.Drawing.Point(680, 360);
+            this.goback.Name = "goback";
+            this.goback.Size = new System.Drawing.Size(108, 41);
+            this.goback.TabIndex = 3;
+            this.goback.Text = "返回主菜单";
+            this.goback.UseVisualStyleBackColor = true;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
+            // 
             // ConsultHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goback);
             this.Controls.Add(this.consult_history);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultHistory";
-            this.Text = "ConsultHistory";
+            this.Text = "咨询历史";
             this.Load += new System.EventHandler(this.ConsultHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.consult_history)).EndInit();
             this.ResumeLayout(false);
@@ -102,5 +116,6 @@ namespace BeWithHer
         private System.Windows.Forms.DataGridViewTextBoxColumn doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn state;
         private System.Windows.Forms.DataGridViewButtonColumn detail;
+        private System.Windows.Forms.Button goback;
     }
 }

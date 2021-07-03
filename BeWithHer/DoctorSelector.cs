@@ -73,6 +73,13 @@ namespace BeWithHer
 
 
         private List<Credential> mDoctorCredentials = null;
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UserMainMenu().Show();
+        }
+
     }
 
     

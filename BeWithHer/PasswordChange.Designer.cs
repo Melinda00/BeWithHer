@@ -35,12 +35,12 @@ namespace BeWithHer
             this.confirm_password_txtbox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.account = new System.Windows.Forms.Label();
             this.old_password_txtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.change_password = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.account = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,16 @@ namespace BeWithHer
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "账号信息";
             // 
+            // account
+            // 
+            this.account.AutoSize = true;
+            this.account.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.account.Location = new System.Drawing.Point(89, 74);
+            this.account.Name = "account";
+            this.account.Size = new System.Drawing.Size(119, 19);
+            this.account.TabIndex = 8;
+            this.account.Text = "placeholder";
+            // 
             // old_password_txtbox
             // 
             this.old_password_txtbox.Location = new System.Drawing.Point(87, 120);
@@ -152,16 +162,6 @@ namespace BeWithHer
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.button2_Click);
             // 
-            // account
-            // 
-            this.account.AutoSize = true;
-            this.account.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.account.Location = new System.Drawing.Point(89, 74);
-            this.account.Name = "account";
-            this.account.Size = new System.Drawing.Size(119, 19);
-            this.account.TabIndex = 8;
-            this.account.Text = "placeholder";
-            // 
             // PasswordChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -172,7 +172,7 @@ namespace BeWithHer
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "PasswordChange";
-            this.Text = "PasswordChange";
+            this.Text = "普通的修改密码界面";
             this.Load += new System.EventHandler(this.PasswordChange_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

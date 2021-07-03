@@ -29,6 +29,7 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewConsult));
             this.con_time_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,8 +78,9 @@ namespace BeWithHer
             // con_time_label
             // 
             this.con_time_label.AutoSize = true;
+            this.con_time_label.BackColor = System.Drawing.Color.Transparent;
             this.con_time_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.con_time_label.Location = new System.Drawing.Point(68, 59);
+            this.con_time_label.Location = new System.Drawing.Point(68, 45);
             this.con_time_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.con_time_label.Name = "con_time_label";
             this.con_time_label.Size = new System.Drawing.Size(112, 25);
@@ -88,8 +90,9 @@ namespace BeWithHer
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(68, 94);
+            this.label1.Location = new System.Drawing.Point(69, 111);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 25);
@@ -99,8 +102,9 @@ namespace BeWithHer
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(193, 94);
+            this.label2.Location = new System.Drawing.Point(189, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 25);
@@ -110,8 +114,9 @@ namespace BeWithHer
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(193, 134);
+            this.label3.Location = new System.Drawing.Point(189, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 25);
@@ -121,19 +126,21 @@ namespace BeWithHer
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(193, 176);
+            this.label4.Location = new System.Drawing.Point(151, 195);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(92, 25);
             this.label4.TabIndex = 4;
-            this.label4.Text = "状态";
+            this.label4.Text = "心情状态";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(151, 215);
+            this.label5.Location = new System.Drawing.Point(151, 233);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 25);
@@ -143,8 +150,9 @@ namespace BeWithHer
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(68, 256);
+            this.label6.Location = new System.Drawing.Point(68, 271);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(432, 25);
@@ -153,7 +161,7 @@ namespace BeWithHer
             // 
             // rmk_txtbox
             // 
-            this.rmk_txtbox.Location = new System.Drawing.Point(72, 294);
+            this.rmk_txtbox.Location = new System.Drawing.Point(73, 313);
             this.rmk_txtbox.Margin = new System.Windows.Forms.Padding(4);
             this.rmk_txtbox.Multiline = true;
             this.rmk_txtbox.Name = "rmk_txtbox";
@@ -220,8 +228,9 @@ namespace BeWithHer
             // label
             // 
             this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label.Location = new System.Drawing.Point(4, 11);
+            this.label.Location = new System.Drawing.Point(8, 11);
             this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(172, 25);
@@ -231,7 +240,7 @@ namespace BeWithHer
             // selected_doctor_label
             // 
             this.selected_doctor_label.AutoSize = true;
-            this.selected_doctor_label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.selected_doctor_label.BackColor = System.Drawing.Color.Transparent;
             this.selected_doctor_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.selected_doctor_label.Location = new System.Drawing.Point(193, 11);
             this.selected_doctor_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -242,12 +251,13 @@ namespace BeWithHer
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.color5);
             this.groupBox1.Controls.Add(this.color1);
             this.groupBox1.Controls.Add(this.color2);
             this.groupBox1.Controls.Add(this.color3);
             this.groupBox1.Controls.Add(this.color4);
-            this.groupBox1.Location = new System.Drawing.Point(255, 80);
+            this.groupBox1.Location = new System.Drawing.Point(251, 97);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -257,12 +267,13 @@ namespace BeWithHer
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.flow5);
             this.groupBox2.Controls.Add(this.flow1);
             this.groupBox2.Controls.Add(this.flow2);
             this.groupBox2.Controls.Add(this.flow3);
             this.groupBox2.Controls.Add(this.flow4);
-            this.groupBox2.Location = new System.Drawing.Point(255, 124);
+            this.groupBox2.Location = new System.Drawing.Point(251, 141);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -330,9 +341,9 @@ namespace BeWithHer
             // consult_date
             // 
             this.consult_date.AutoSize = true;
-            this.consult_date.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.consult_date.BackColor = System.Drawing.Color.Transparent;
             this.consult_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.consult_date.Location = new System.Drawing.Point(193, 59);
+            this.consult_date.Location = new System.Drawing.Point(193, 45);
             this.consult_date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.consult_date.Name = "consult_date";
             this.consult_date.Size = new System.Drawing.Size(113, 25);
@@ -341,7 +352,7 @@ namespace BeWithHer
             // 
             // submit_button
             // 
-            this.submit_button.Location = new System.Drawing.Point(665, 389);
+            this.submit_button.Location = new System.Drawing.Point(632, 407);
             this.submit_button.Margin = new System.Windows.Forms.Padding(4);
             this.submit_button.Name = "submit_button";
             this.submit_button.Size = new System.Drawing.Size(119, 46);
@@ -352,12 +363,13 @@ namespace BeWithHer
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.grade5);
             this.groupBox3.Controls.Add(this.grade1);
             this.groupBox3.Controls.Add(this.grade2);
             this.groupBox3.Controls.Add(this.grade3);
             this.groupBox3.Controls.Add(this.grade4);
-            this.groupBox3.Location = new System.Drawing.Point(255, 212);
+            this.groupBox3.Location = new System.Drawing.Point(251, 229);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -424,12 +436,13 @@ namespace BeWithHer
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.state5);
             this.groupBox4.Controls.Add(this.state1);
             this.groupBox4.Controls.Add(this.state2);
             this.groupBox4.Controls.Add(this.state3);
             this.groupBox4.Controls.Add(this.state4);
-            this.groupBox4.Location = new System.Drawing.Point(255, 168);
+            this.groupBox4.Location = new System.Drawing.Point(251, 185);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -496,6 +509,7 @@ namespace BeWithHer
             // 
             // barcode_img
             // 
+            this.barcode_img.BackColor = System.Drawing.Color.Transparent;
             this.barcode_img.Location = new System.Drawing.Point(490, 11);
             this.barcode_img.Name = "barcode_img";
             this.barcode_img.Size = new System.Drawing.Size(270, 50);
@@ -505,7 +519,8 @@ namespace BeWithHer
             // barcode_label
             // 
             this.barcode_label.AutoSize = true;
-            this.barcode_label.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.barcode_label.BackColor = System.Drawing.Color.Transparent;
+            this.barcode_label.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.barcode_label.Location = new System.Drawing.Point(576, 64);
             this.barcode_label.Name = "barcode_label";
             this.barcode_label.Size = new System.Drawing.Size(97, 19);
@@ -516,7 +531,8 @@ namespace BeWithHer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(792, 489);
             this.Controls.Add(this.barcode_label);
             this.Controls.Add(this.barcode_img);
             this.Controls.Add(this.groupBox4);
@@ -537,7 +553,7 @@ namespace BeWithHer
             this.Controls.Add(this.con_time_label);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewConsult";
-            this.Text = "Consult";
+            this.Text = "咨询信息填写";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

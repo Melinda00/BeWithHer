@@ -16,5 +16,11 @@ namespace BeWithHer
         {
             InitializeComponent();
         }
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DoctorMainMenu().Show();
+        }
     }
 }

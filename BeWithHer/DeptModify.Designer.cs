@@ -29,6 +29,7 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeptModify));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.name_txtbox = new System.Windows.Forms.TextBox();
             this.phone_txtbox = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@ namespace BeWithHer
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox1.Controls.Add(this.name_txtbox);
             this.groupBox1.Controls.Add(this.phone_txtbox);
             this.groupBox1.Controls.Add(this.addr_txtbox);
@@ -173,12 +175,13 @@ namespace BeWithHer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(677, 333);
             this.Controls.Add(this.goback);
             this.Controls.Add(this.verify_button);
             this.Controls.Add(this.groupBox1);
             this.Name = "DeptModify";
-            this.Text = "DeptModify";
+            this.Text = "科室信息修改";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

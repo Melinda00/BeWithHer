@@ -38,41 +38,42 @@ namespace BeWithHer
             // user_button
             // 
             this.user_button.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.user_button.Location = new System.Drawing.Point(29, 143);
+            this.user_button.Location = new System.Drawing.Point(49, 143);
             this.user_button.Name = "user_button";
-            this.user_button.Size = new System.Drawing.Size(80, 32);
+            this.user_button.Size = new System.Drawing.Size(104, 32);
             this.user_button.TabIndex = 0;
-            this.user_button.Text = "用户";
+            this.user_button.Text = "我是用户";
             this.user_button.UseVisualStyleBackColor = true;
             // 
             // doctor_button
             // 
             this.doctor_button.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.doctor_button.Location = new System.Drawing.Point(166, 143);
+            this.doctor_button.Location = new System.Drawing.Point(173, 143);
             this.doctor_button.Name = "doctor_button";
-            this.doctor_button.Size = new System.Drawing.Size(81, 32);
+            this.doctor_button.Size = new System.Drawing.Size(99, 32);
             this.doctor_button.TabIndex = 1;
-            this.doctor_button.Text = "医生";
+            this.doctor_button.Text = "我是医生";
             this.doctor_button.UseVisualStyleBackColor = true;
             // 
             // cancel_button
             // 
             this.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel_button.Location = new System.Drawing.Point(301, 143);
+            this.cancel_button.Location = new System.Drawing.Point(293, 143);
             this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(83, 32);
+            this.cancel_button.Size = new System.Drawing.Size(99, 32);
             this.cancel_button.TabIndex = 2;
-            this.cancel_button.Text = "返回";
+            this.cancel_button.Text = "返回登录";
             this.cancel_button.UseVisualStyleBackColor = true;
             // 
             // selector_label
             // 
             this.selector_label.AutoSize = true;
-            this.selector_label.Location = new System.Drawing.Point(136, 69);
+            this.selector_label.Font = new System.Drawing.Font("方正清刻本悦宋简体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.selector_label.Location = new System.Drawing.Point(92, 76);
             this.selector_label.Name = "selector_label";
-            this.selector_label.Size = new System.Drawing.Size(127, 15);
+            this.selector_label.Size = new System.Drawing.Size(218, 20);
             this.selector_label.TabIndex = 3;
-            this.selector_label.Text = "注册用户还是医生";
+            this.selector_label.Text = "注册新用户还是新医生？";
             // 
             // RegisterSelector
             // 
@@ -84,7 +85,7 @@ namespace BeWithHer
             this.Controls.Add(this.doctor_button);
             this.Controls.Add(this.user_button);
             this.Name = "RegisterSelector";
-            this.Text = "RegisterSelector";
+            this.Text = "注册提示";
             this.ResumeLayout(false);
             this.PerformLayout();
 

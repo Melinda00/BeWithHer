@@ -14,7 +14,7 @@ namespace BeWithHer
         public static void Connect()
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "192.168.1.4";
+            builder.Server = "10.120.224.205";
             builder.Port = 3306;
             builder.Database = "BeWithHer";
             builder.UserID = "bewithher";

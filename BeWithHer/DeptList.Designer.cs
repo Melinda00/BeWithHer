@@ -29,15 +29,16 @@ namespace BeWithHer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeptList));
             this.dept_info = new System.Windows.Forms.DataGridView();
-            this.goback = new System.Windows.Forms.Button();
-            this.new_dept_button = new System.Windows.Forms.Button();
             this.d_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_hospital = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_addr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.d_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modify = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.goback = new System.Windows.Forms.Button();
+            this.new_dept_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dept_info)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,28 +61,6 @@ namespace BeWithHer
             this.dept_info.Size = new System.Drawing.Size(899, 283);
             this.dept_info.TabIndex = 2;
             this.dept_info.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dept_info_CellContentClick);
-            // 
-            // goback
-            // 
-            this.goback.Location = new System.Drawing.Point(755, 343);
-            this.goback.Name = "goback";
-            this.goback.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.goback.Size = new System.Drawing.Size(147, 43);
-            this.goback.TabIndex = 3;
-            this.goback.Text = "返回主界面";
-            this.goback.UseVisualStyleBackColor = true;
-            this.goback.Click += new System.EventHandler(this.goback_Click);
-            // 
-            // new_dept_button
-            // 
-            this.new_dept_button.Location = new System.Drawing.Point(558, 343);
-            this.new_dept_button.Name = "new_dept_button";
-            this.new_dept_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.new_dept_button.Size = new System.Drawing.Size(147, 43);
-            this.new_dept_button.TabIndex = 4;
-            this.new_dept_button.Text = "新建科室信息";
-            this.new_dept_button.UseVisualStyleBackColor = true;
-            this.new_dept_button.Click += new System.EventHandler(this.new_dept_button_Click);
             // 
             // d_id
             // 
@@ -119,16 +98,39 @@ namespace BeWithHer
             this.modify.MinimumWidth = 6;
             this.modify.Name = "modify";
             // 
+            // goback
+            // 
+            this.goback.Location = new System.Drawing.Point(755, 343);
+            this.goback.Name = "goback";
+            this.goback.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.goback.Size = new System.Drawing.Size(147, 43);
+            this.goback.TabIndex = 3;
+            this.goback.Text = "返回主界面";
+            this.goback.UseVisualStyleBackColor = true;
+            this.goback.Click += new System.EventHandler(this.goback_Click);
+            // 
+            // new_dept_button
+            // 
+            this.new_dept_button.Location = new System.Drawing.Point(558, 343);
+            this.new_dept_button.Name = "new_dept_button";
+            this.new_dept_button.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.new_dept_button.Size = new System.Drawing.Size(147, 43);
+            this.new_dept_button.TabIndex = 4;
+            this.new_dept_button.Text = "新建科室信息";
+            this.new_dept_button.UseVisualStyleBackColor = true;
+            this.new_dept_button.Click += new System.EventHandler(this.new_dept_button_Click);
+            // 
             // DeptList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(935, 450);
             this.Controls.Add(this.new_dept_button);
             this.Controls.Add(this.goback);
             this.Controls.Add(this.dept_info);
             this.Name = "DeptList";
-            this.Text = "DeptList";
+            this.Text = "科室信息";
             this.Load += new System.EventHandler(this.DeptList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dept_info)).EndInit();
             this.ResumeLayout(false);

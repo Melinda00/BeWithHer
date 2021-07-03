@@ -79,11 +79,7 @@ namespace BeWithHer
             new PasswordChange().Show();
         }
 
-        private void reserve_con_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new ConsultingReserve().Show();
-        }
+     
 
         private void history_con_Click(object sender, EventArgs e)
         {
@@ -103,6 +99,11 @@ namespace BeWithHer
         private void about_us_Click(object sender, EventArgs e)
         {
             new AboutUs().ShowDialog();
+        }
+
+        private void con_report_Click(object sender, EventArgs e)
+        {
+            new Consultingcount().Show();
         }
     }
 }

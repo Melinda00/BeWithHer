@@ -44,13 +44,13 @@ namespace BeWithHer
                 consult_history.Rows[consult_history.Rows.Count - 1].Cells["date"].Value = consultInfo.Date;
                 if(Program.CurrentCredential.IsUser)
                 {
-                    consult_history.Rows[consult_history.Rows.Count - 1].Cells["doctor"].Value = Convert.ToString(BeWithHerConnector.ExecuteQuery(string.Format("select DOC_NAME from DOCTOR where DOC_ID = {0};", consultInfo.DoctorID))[0][0]);
+                    consult_history.Rows[consult_history.Rows.Count - 1].Cells["doctor"].Value = Convert.ToString(BeWithHerConnector.ExecuteQuery(string.Format("select DOC_NAME from DOCTOR where DOC_ID = '{0}';", consultInfo.DoctorID))[0][0]);
                     consult_history.Rows[consult_history.Rows.Count - 1].Cells["state"].Value = consultInfo.DoctorReply != "" ? "医生已回复" : "医生未回复";
                 }
                    
                 else
                 {
-                    consult_history.Rows[consult_history.Rows.Count - 1].Cells["doctor"].Value = Convert.ToString(BeWithHerConnector.ExecuteQuery(string.Format("select U_NAME from UINFO where U_ID = {0};", consultInfo.UserID))[0][0]);
+                    consult_history.Rows[consult_history.Rows.Count - 1].Cells["doctor"].Value = Convert.ToString(BeWithHerConnector.ExecuteQuery(string.Format("select U_NAME from UINFO where U_ID = '{0}';", consultInfo.UserID))[0][0]);
                     consult_history.Rows[consult_history.Rows.Count - 1].Cells["state"].Value = consultInfo.DoctorReply != "" ? "已回复" : "未回复";
                 }
                 consult_history.Rows[consult_history.Rows.Count - 1].Cells["detail"].Value = "查看详情";
@@ -71,6 +71,12 @@ namespace BeWithHer
             {
                 new ConsultInfoViewer(mConsultInfos[e.RowIndex]).ShowDialog();
             }
+        }
+
+        private void goback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UserMainMenu().Show();
         }
     }
 }
